@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/import.css">
+</head>
+<body>
+    <header>
+        <div class="gnb-topbar">
+            <ul class="gnb-top-menu">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" aria-haspopup="true"><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</button>
+                        <ul class="dropdown-menu">
+                            <li role="option" tabindex="0"><span><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</span></li>
+                            <li role="option" tabindex="0"><span><img alt="베트남 국기" src="/img/vnm_flag.png"/> VNM</span></li>
+                            <li role="option" tabindex="0"><span><img alt="미국 국기" src="/img/eng_flag.svg"/> ENG</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 
+                    한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
+                 -->
+                
+                <li><a href="/pageHtml/login.html" >로그인</a></li>
+                <li><a href="/pageHtml/logup.html">회원가입</a></li>
+
+                <li class="hidden"><a href="/pageHtml/mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="/pageHtml/mypageVnm.html">마이페이지</a></li>
+            </ul>
+        </div>
+
+        <div class="gnb-menubar">
+            <a href="/index.html">
+                <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+            </a>
+
+            <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="/img/bar-icon.png" alt="메뉴아이콘" /></button>
+            <ul id="gnbMenu" class="gnb-menu">
+                <li class="gnb-close-btn">
+                    <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                    <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">기업 소개</span>
+                    <ul>
+                        <li><a href="/pageHtml/greeting.html">CEO 인사말</a></li>
+                        <li><a href="/pageHtml/history.html">연혁</a></li>
+                        <li><a href="/pageHtml/certification.html">인증 내역</a></li>
+                        <li><a href="/pageHtml/customerInfo.html">고객 병원 및 거래업체</a></li>
+                        <li><a href="/pageHtml/newsDataBoard.html">보도자료</a></li>
+                        <li><a href="/pageHtml/contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">제품 및 수술법</span>
+                    <ul>
+                        <li><a href="/pageHtml/productInfo.html">제품 소개</a></li>
+                        <li><a href="/pageHtml/surgeryInfo.html">수술법 소개</a></li>
+                        <li><a href="/pageHtml/reviewRecommend.html">수술 후기 및 추천</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">교육과정</span>
+                    <ul>
+                        <li><a href="/pageHtml/onlineStudy.html">온라인 교육</a></li>
+                        <li><a href="/pageHtml/offlineStudy.html">오프라인 교육</a></li>
+                        <li><a href="/pageHtml/studyDataBoard.html">학습 자료실</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box no-list">
+                    <a href="/pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">고객센터</span>
+                    <ul>
+                        <li><a href="/pageHtml/noticeBoard.html">공지사항</a></li>
+                        <li><a href="/pageHtml/questionAnwserBoard.html">Q&A</a></li>
+                        <li><a href="/pageHtml/freeBoard.html">자유게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div id="wrap">
+        <div class="page">
+            <div class="page-title">
+                <h2 class="primary-text">회원가입</h2>
+            </div>
+            <div class="page-content">
+                <div class="content">
+                    <form>
+                        <div class="item">
+                            <div class="text-input include-btn">
+                                <label>아이디</label>
+                                <input type="text" />
+                                <button class="btn primary-bg">중복체크</button>
+                            </div>
+                        </div>
+
+                        <div class="password-input item">
+                            <label>비밀번호</label>
+                            <input type="password" autocomplete="off" placeholder="영문, 숫자, 특수문자 8~15자"/>
+                        </div>
+
+                        <div class="password-input item">
+                            <label>비밀번호 확인</label>
+                            <input type="password" autocomplete="off" />
+                        </div>
+
+                        <div class="text-input item mt-30">
+                            <label>이름</label>
+                            <input type="text" />
+                        </div>
+
+                        <div class="item">
+                            <div class="text-input include-btn">
+                                <label>휴대폰번호</label>
+                                <input type="text" />
+                                <button class="btn primary-bg">중복체크</button>
+                            </div>
+                        </div>
+
+                        <div class="text-input item">
+                            <label>소속병원</label>
+                            <input type="text" />
+                        </div>
+
+                        <div class="rdo-group item mt-30">
+                            <label>성별</label>
+                            <div class="row">
+                                <div class="rdo">
+                                    <input id="manSelect" type="radio" name="gender" checked />
+                                    <label for="manSelect">남</label>
+                                </div>
+                                <div class="rdo">
+                                    <input id="womanSelect" type="radio" name="gender" />
+                                    <label for="womanSelect">여</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rdo-group item mt-30">
+                            <label>SMS 수신여부</label>
+                            <div class="row">
+                                <div class="rdo">
+                                    <input id="yesSMsRdo" type="radio" name="receive" />
+                                    <label for="yesSMsRdo">예</label>
+                                </div>
+                                <div class="rdo">
+                                    <input id="noSMsRdo" type="radio" name="receive" checked />
+                                    <label for="noSMsRdo">아니요</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="form-explain no-label-item">[예]에 체크하시면 업데이트되는 온/오프라인 교육 소식을 받아보실 수 있습니다.</p>
+
+                        <div class="item row mt-30"> 
+                            <div class="chk">
+                                <input id="useAgreeChk" type="checkbox" />
+                                <label for="useAgreeChk">이용약관에 동의합니다.</label>
+                            </div>
+                            <button onclick="modalOpen(termModal, event)" class="btn-link ml-auto">보기</button>
+                        </div>
+
+                        <div class="item row mt-20"> 
+                            <div class="chk">
+                                <input id="privacyAgreeChk" type="checkbox" />
+                                <label for="privacyAgreeChk">개인정보 취급방침에 동의합니다.</label>
+                            </div>
+                            <button onclick="modalOpen(termModal, event)" class="btn-link ml-auto">보기</button>
+                        </div>
+
+                        <div class="item mt-30 row center middle">
+                            <button type="submit" class="btn primary-bg">회원가입</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="company-detail-list">
+            <div class="logo-w">
+                <img src="/img/logo_w.png" alt="오큐라이트 로고"/>
+            </div>
+            <ul>
+                <li>㈜오큐라이트ㅣ 주소 경기도 성남시 성남대로 1342, 비111 (복정동, 가천대학교IT대학)</li>
+                <li>T. 031-8039-6177 E. oculight@oculight.co.kr</li>
+                <li>Copyright ⓒ oculight All Rights Reserved.</li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn">개인정보취급방침</button>
+            <button class="btn">이용약관</button>
+        </div>
+    </footer>
+
+    <div id="termModal" class="modal-component">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>이용약관</h3>
+                <button onclick="modalClose(termModal)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+            </div>
+            <div class="modal-body">
+                <div class="terms">
+                    <p>여러분은 본 약관을 읽고 동의하신 후 회원 가입을 신청하실 수 있으며, 네이버는 이에 대한 승낙을 통해 회원 가입 절차를 완료하고 여러분께 네이버 서비스 이용 계정(이하 ‘계정’)을 부여합니다. 계정이란 회원이 네이버 서비스에 로그인한 이후 이용하는 각종 서비스 이용 이력을 회원 별로 관리하기 위해 설정한 회원 식별 단위를 말합니다. </p>
+                    <p>회원은 자신의 계정을 통해 좀더 다양한 네이버 서비스를 보다 편리하게 이용할 수 있습니다. 이와 관련한 상세한 내용은 계정 운영정책 및 고객센터 내 네이버 회원가입 방법 등에서 확인해 주세요. </p>
+                    <p>네이버는 단체에 속한 여러 구성원들이 공동의 계정으로 네이버 서비스를 함께 이용할 수 있도록 단체회원 계정도 부여하고 있습니다. 단체회원 구성원들은 하나의 계정 및 아이디(ID)를 공유하되 각자 개별적으로 설정한 비밀번호를 입력하여 계정에 로그인하고 각종 서비스를 이용하게 됩니다. 단체회원은 관리자와 멤버로 구성되며, 관리자는 구성원 전부로부터 권한을 위임 받아 단체회원을 대표하고 단체회원 계정을 운용합니다. 따라서 관리자는 단체회원 계정을 통해 별도 약관 또는 기존 약관 개정에 대해 동의하거나 단체회원에서 탈퇴할 수 있고, 멤버들의 단체회원 계정 로그인 방법 및 이를 통한 게시물 게재 등 네이버 서비스 이용을 관리(게시물 삭제 포함)할 수 있습니다. 본 약관에서 규정한 사항은 원칙적으로 구성원 모두에게 적용되며, 각각의 구성원은 다른 구성원들의 단체회원 계정 및 아이디(ID)를 통한 서비스 이용에 관해 연대책임을 부담합니다. 단체회원 계정 사용에서의 관리자, 멤버 등의 권한 및 (공동)책임에 관한 사항 등은 계정 운영정책 및 고객센터 내 네이버 단체회원(단체 아이디) 소개 등에서 확인해 주시기 바랍니다. 여러분은 본 약관을 읽고 동의하신 후 회원 가입을 신청하실 수 있으며, 네이버는 이에 대한 승낙을 통해 회원 가입 절차를 완료하고 여러분께 네이버 서비스 이용 계정(이하 ‘계정’)을 부여합니다. </p>
+                    <p>계정이란 회원이 네이버 서비스에 로그인한 이후 이용하는 각종 서비스 이용 이력을 회원 별로 관리하기 위해 설정한 회원 식별 단위를 말합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/component.js"></script>    
+</body>
+</html>

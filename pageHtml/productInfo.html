@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/import.css">
+</head>
+<body>
+    <header>
+        <div class="gnb-topbar">
+            <ul class="gnb-top-menu">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" aria-haspopup="true"><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</button>
+                        <ul class="dropdown-menu">
+                            <li role="option" tabindex="0"><span><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</span></li>
+                            <li role="option" tabindex="0"><span><img alt="베트남 국기" src="/img/vnm_flag.png"/> VNM</span></li>
+                            <li role="option" tabindex="0"><span><img alt="미국 국기" src="/img/eng_flag.svg"/> ENG</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 
+                    한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
+                 -->
+                
+                <li><a href="/pageHtml/login.html" >로그인</a></li>
+                <li><a href="/pageHtml/logup.html">회원가입</a></li>
+
+                <li class="hidden"><a href="/pageHtml/mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="/pageHtml/mypageVnm.html">마이페이지</a></li>
+            </ul>
+        </div>
+
+        <div class="gnb-menubar">
+            <a href="/index.html">
+                <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+            </a>
+
+            <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="/img/bar-icon.png" alt="메뉴아이콘" /></button>
+            <ul id="gnbMenu" class="gnb-menu">
+                <li class="gnb-close-btn">
+                    <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                    <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">기업 소개</span>
+                    <ul>
+                        <li><a href="/pageHtml/greeting.html">CEO 인사말</a></li>
+                        <li><a href="/pageHtml/history.html">연혁</a></li>
+                        <li><a href="/pageHtml/certification.html">인증 내역</a></li>
+                        <li><a href="/pageHtml/customerInfo.html">고객 병원 및 거래업체</a></li>
+                        <li><a href="/pageHtml/newsDataBoard.html">보도자료</a></li>
+                        <li><a href="/pageHtml/contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">제품 및 수술법</span>
+                    <ul>
+                        <li><a href="/pageHtml/productInfo.html">제품 소개</a></li>
+                        <li><a href="/pageHtml/surgeryInfo.html">수술법 소개</a></li>
+                        <li><a href="/pageHtml/reviewRecommend.html">수술 후기 및 추천</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">교육과정</span>
+                    <ul>
+                        <li><a href="/pageHtml/onlineStudy.html">온라인 교육</a></li>
+                        <li><a href="/pageHtml/offlineStudy.html">오프라인 교육</a></li>
+                        <li><a href="/pageHtml/studyDataBoard.html">학습 자료실</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box no-list">
+                    <a href="/pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">고객센터</span>
+                    <ul>
+                        <li><a href="/pageHtml/noticeBoard.html">공지사항</a></li>
+                        <li><a href="/pageHtml/questionAnwserBoard.html">Q&A</a></li>
+                        <li><a href="/pageHtml/freeBoard.html">자유게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div id="wrap">
+        <div class="page remove-padding">
+            <div class="page-title">
+                <h2 class="primary-text">제품 소개</h2>
+
+                <div class="crumble">
+                    <ul>
+                        <li><a href="" target="_self">제품 및 수술법</a></li>
+                        <li><a href="" target="_self">제품 소개</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="content product-info">
+                    <div>
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h3>
+                                        <strong>아이챠퍼 (iChopper)</strong><br/>
+                                        백내장 수술용 안내조명챠퍼
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            - 오큐라이트의 안전한 백내장 수술기구, 
+                                            아이챠퍼는 새로운 백내장 수술용 조명입니다. 
+                                            1회용 소모품으로서 감염 위험이 적고, 시인성 향상으로 정교한 수술이 가능합니다. 
+                                            안구 내 삽입되는 수술 조명기구에 수정체 절개용 챠퍼(Chopper) 기능을 탑재하여 더욱 간편합니다.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="/img/iChopper_info.png" alt="아이챠퍼 이미지" />
+                                </div>
+                            </div>
+                            <div class="card-content row mt-30">
+                                <div>
+                                    <h4>제품 정보</h4>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>품목명</th>
+                                                <th>모델명</th>
+                                                <th>품목인증번호</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>내시경용 광원장치</td>
+                                                <td>NAM-27GB</td>
+                                                <td>제인 11-9호</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-two">
+                                    <h4>특허</h4>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>특허번호</th>
+                                                <th>출원일자</th>
+                                                <th>출원번호</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>제10-1478463호</td>
+                                                <td>2013.10.10</td>
+                                                <td>10-2013-0120806</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="light-blue-bg">
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h3>
+                                        <strong>아이비전 (iVision)</strong><br/>
+                                        오큐라이트 전용 광원장치
+                                    </h3>
+                                    <ul>
+                                        <li>- 국내 최초 국산화에 성공한 보급형 안과 수술용 광원장치 </li>
+                                        <li>- 망막 수술, 백내장 수술 모두 사용 가능</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="/img/iVision_info.png" alt="아이비전 이미지" />
+                                </div>
+                            </div>
+                            <di class="card-content">
+                                <div class="mt-30">
+                                    <h4>광원장치 성능</h4>
+                                    <table class="pc-table">
+                                        <thead>
+                                            <tr>
+                                                <th>품목군</th>
+                                                <th>품명</th>
+                                                <th>크기(mm)</th>
+                                                <th>전기적 정격 및 주파수</th>
+                                                <th>소비전력</th>
+                                                <th>안전장치</th>
+                                                <th>커넥팅 방식</th>
+                                                <th>색온도</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>일반기기</td>
+                                                <td>일반 조명용 광원장치<br/>[A03020.01]</td>
+                                                <td>158.6 x 182 x 145</td>
+                                                <td>100-240V, 50/60Hz</td>
+                                                <td>200VA 이하</td>
+                                                <td>전원 퓨즈</td>
+                                                <td>DORC 제품 호환</td>
+                                                <td>V1-S1 : 5,700K, 5,000K</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="mobile-table">
+                                        <thead>
+                                            <tr>
+                                                <th>품목군</th>
+                                                <th>품명</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>일반기기</td>
+                                                <td>일반 조명용 광원장치<br/>[A03020.01]</td>
+                                            </tr>
+                                        </tbody>                                        
+                                                
+                                        <thead>
+                                            <tr>
+                                                <th>크기(mm)</th>
+                                                <th>전기적 정격 및 주파수</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td>158.6 x 182 x 145</td>
+                                                <td>100-240V, 50/60Hz</td>
+                                                
+                                            </tr>
+                                        </tbody>
+
+                                        <thead>
+                                            <tr>
+                                                <th>소비전력</th>
+                                                <th>안전장치</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td>200VA 이하</td>
+                                                <td>전원 퓨즈</td>
+                                                
+                                            </tr>
+                                        </tbody>
+
+                                        <thead>
+                                            <tr>
+                                                <th>커넥팅 방식</th>
+                                                <th>색온도</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                
+                                                <td>DORC 제품 호환</td>
+                                                <td>V1-S1 : 5,700K, 5,000K</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </di>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h3>
+                                        <strong>아이프로브 (iProbe)</strong><br/>
+                                        망막 수술용 일루미네이션 프로브
+                                    </h3>
+                                    <ul>
+                                        <li>- 광섬유 등을 이용하여 망막 수술에서 안구 내 비스듬히 환부를 밝히는 1회용 치료 재료 </li>
+                                        <li>- 오큐라이트 맞춤형 광원장치를 사용하여 안정적인 광 품질 제공</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="/img/iProbe_info.png" alt="아이프로브 이미지" />
+                                </div>
+                            </div>
+                            <di class="card-content">
+                                <div class="mt-30">
+                                    <h4>제품 정보</h4>
+                                    <table class="pc-table">
+                                        <thead>
+                                            <tr>
+                                                <th>모델명</th>
+                                                <th>품목인증번호</th>
+                                                <th>보험코드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>OCP-23G,OCP-25G</td>
+                                                <td>제인 11-9호</td>
+                                                <td class="text-left">
+                                                    I08040330 : 1회용 안구 내 조명용 PROBE <br/>
+                                                    급여등재 고시는 유리체절제술(망막수술)에 사용되는 1회용 치료재료 (보건복지부 고시 제2019-236호 및 제 2019-260호)
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="mobile-table">
+                                        <thead>
+                                            <tr>
+                                                <th>모델명</th>
+                                                <th>품목인증번호</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>OCP-23G,OCP-25G</td>
+                                                <td>제인 11-9호</td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">보험코드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2" class="text-left">
+                                                    I08040330 : 1회용 안구 내 조명용 PROBE <br/>
+                                                    급여등재 고시는 유리체절제술(망막수술)에 사용되는 1회용 치료재료 (보건복지부 고시 제2019-236호 및 제 2019-260호)
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-30">
+                                    <h4>치수 / 광성능</h4>
+                                    <table class="pc-table">
+                                        <thead>
+                                            <tr>
+                                                <th>모델명</th>
+                                                <th>관길이(mm)</th>
+                                                <th>관외경(mm)</th>
+                                                <th>핸들길이(mm)</th>
+                                                <th>광섬유길이(mm)</th>
+                                                <th>조도(Lux)</th>
+                                                <th>광분포각(도)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>OCP-23G</td>
+                                                <td>32 +- 5</td>
+                                                <td>0.64 +- 0.1</td>
+                                                <td>65 +- 3</td>
+                                                <td>2500 +- 200</td>
+                                                <td>2,000 이상</td>
+                                                <td>50 +- 5 이내</td>
+                                            </tr>
+                                            <tr>
+                                                <td>OCP-25G</td>
+                                                <td>32 +- 5</td>
+                                                <td>0.5 +- 0.1</td>
+                                                <td>65 +- 3</td>
+                                                <td>2500 +- 200</td>
+                                                <td>2,000 이상</td>
+                                                <td>50 +- 5 이내</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="mobile-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>OCP-23G</th>
+                                                <th>OCP-25G</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>관길이(mm)</td>
+                                                <td>32 +- 5</td>
+                                                <td>32 +- 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>관외경(mm)</td>
+                                                <td>0.64 +- 0.1</td>
+                                                <td>0.5 +- 0.1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>핸들길이(mm)</td>
+                                                <td>65 +- 3</td>
+                                                <td>65 +- 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>광섬유길이(mm)</td>
+                                                <td>2500 +- 200</td>
+                                                <td>2500 +- 200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>조도(Lux)</td>
+                                                <td>2,000 이상</td>
+                                                <td>2,000 이상</td>
+                                            </tr>
+                                            <tr>
+                                                <td>광분포각(도)</td>
+                                                <td>50 +- 5 이내</td>
+                                                <td>50 +- 5 이내</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </di>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="">
+                            <h4 class="primary-text text-center">고객병원</h4>
+                            <div class="customer-list pt-30 pb-120">
+                                <ul>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                    <li><img src="" alt="고객병원명" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="company-detail-list">
+            <div class="logo-w">
+                <img src="/img/logo_w.png" alt="오큐라이트 로고"/>
+            </div>
+            <ul>
+                <li>㈜오큐라이트ㅣ 주소 경기도 성남시 성남대로 1342, 비111 (복정동, 가천대학교IT대학)</li>
+                <li>T. 031-8039-6177 E. oculight@oculight.co.kr</li>
+                <li>Copyright ⓒ oculight All Rights Reserved.</li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn">개인정보취급방침</button>
+            <button class="btn">이용약관</button>
+        </div>
+    </footer>
+    
+    <script src="/js/component.js"></script>    
+</body>
+</html>

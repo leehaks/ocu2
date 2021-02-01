@@ -1,0 +1,1072 @@
+
+header { 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000;
+}
+
+body.scroll-hidden { overflow: hidden; }
+
+#wrap { 
+    padding-top: 7.5rem; 
+    margin: 0 auto; 
+}
+
+footer { 
+    display: flex; 
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #052B4A; 
+    padding: 3.5rem 7.5rem 2.5rem; 
+}
+
+footer .btn-group .btn { flex-shrink: 0; }  
+ 
+
+
+section .section-title { 
+    margin-bottom: 1.875rem; 
+    text-align: center;
+    font-size: 1.25rem; 
+    color: #325FAB; 
+}
+
+section { overflow: hidden; }
+
+section [class*="-card"] { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.download-icon { 
+    width: 10px; 
+    margin-right: 4px; 
+}
+
+
+.page { padding: 6.25rem 8.75rem 12rem; }
+.page.remove-padding { padding: 6.25rem 0 0; }
+
+.page-title { margin-bottom: 4.75rem; }
+.page.remove-padding .page-title { padding: 0 8.75rem; }
+
+
+.page-title h2 { 
+    text-align: center;
+    font-size: 2rem; 
+}
+
+
+.ocu-info-card { 
+    background-color: #fff; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin: 7.5rem auto; 
+    padding: 1.875rem 3.75rem;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 10px;
+}
+
+.ocu-info-card div { 
+    max-width: 16rem; 
+    margin-right: 1.875rem; 
+}
+
+.ocu-info-card p { 
+    line-height: 1.625rem; 
+    color: #444; 
+}
+
+.ocu-product-card { 
+    display: flex; 
+    align-items: center;
+}
+
+.ocu-product-card .card-item { 
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ocu-product-card h3 { 
+    margin-top: 1.25rem; 
+    line-height: 1.625rem; 
+    font-size: 1.25rem; 
+    font-weight: 700; 
+}
+
+.ocu-product-card p { 
+    margin-top: .313rem; 
+    line-height: 1.625rem; 
+}
+
+section .history-card { left: 110px; }
+
+.history-card { 
+    display: flex; 
+    justify-content: center;
+    width: 100%; 
+    max-width: 1200px; 
+    padding-top: 2.5rem; 
+    margin: 0 auto; 
+    position: relative;
+    left: 70px; 
+}
+
+.history-card .history-title-img { 
+    max-width: 250px; 
+}
+
+.history-card ol {
+    position: relative;
+    height: 100%; 
+}
+
+.history-card ol::before { 
+    content: '';
+    position: absolute;
+    top: -1.25rem; 
+    left: 4.45rem; 
+    display: block;
+    background-color: #ebebeb;
+    width: 4px;
+    height: 100%;
+}
+
+.history-card ol > li { 
+    display: flex; 
+    align-items: flex-start;
+}
+
+.history-card ol > li + li { 
+    margin-top: 3.125rem; 
+}
+
+.history-card ol > li:nth-child(2n) ul { 
+    transform: translateX(calc(-100% - 160px));
+}
+
+.history-card ol > li:nth-child(2n) li {
+    justify-content: flex-end;    
+}
+
+.history-card ol > li .date-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #325FAB; 
+    min-width: 4rem;
+    height: 4rem;
+    margin: 0 2.5rem; 
+    border-radius: 50%;
+    font-size: 1.25rem; 
+    color: #fff; 
+    z-index: 10; 
+}
+
+.history-card ul { 
+    display: inline-block; 
+}
+
+.history-card ul li { 
+    display: flex; 
+    align-items: baseline;
+    line-height: 2.375rem; 
+    font-size: 1.125rem; 
+}
+
+.history-card ul li::before { 
+    content: ''; 
+    display: inline-block; 
+    position: relative; 
+    top: -4px; 
+    background: #444; 
+    min-width: 4px; 
+    min-height: 4px; 
+    border-radius: 50%;
+    margin-right: .5rem; 
+}
+
+.news-card { 
+    padding: 1.875rem 3.75rem; 
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: .625rem; 
+}
+
+.board-header { 
+    display: flex; 
+    align-items: center;
+    margin-bottom: .625rem; 
+}
+
+.board-header h3 { 
+    font-size: 1.25rem; 
+    color: #325FAB; 
+}
+
+.board-header .more-view-btn { 
+    margin-left: auto; 
+    color: #9E9E9E; 
+}
+
+.board-list li { 
+    border-top: 1px solid #EDEDED; 
+    padding: .875rem 0; 
+    display: flex; 
+    align-items: center;
+}
+
+.board-list li a { 
+    font-size: .875rem; 
+}
+
+.board-list li .register-date { 
+    margin-left: auto;
+    font-size: .875rem; 
+}
+
+.notice-card { 
+    display: flex;
+    align-items: center;
+    padding: 3.75rem 0; 
+}
+
+.notice-card > * { 
+    flex: 1; 
+}
+
+.notice-card .img-box { 
+    text-align: center;
+}
+
+.notice-card .board { 
+    margin-left: 3rem; 
+}
+
+
+.inquiry-card { 
+    background-color: #fff; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.875rem 3.75rem;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 10px;
+}
+
+.inquiry-card .apply-btn { 
+    background-color: #325FAB; 
+    width: 10.625rem; 
+    padding: 1rem 1.875rem; 
+    border-radius: 1.875rem;
+    box-shadow: 0px 3px 6px #15469A80;
+    font-size: 1.125rem; 
+    color: #fff; 
+}
+
+.inquiry-card .inquiry-list li + li { 
+    margin-top: .5rem;
+}
+
+.inquiry-card .inquiry-list li span { 
+    display: inline-block;
+    min-width: 3.75rem; 
+    margin-right: 1rem; 
+    text-align:justify; 
+}
+
+company-detail-list { margin-right: 1.875rem; }
+
+.company-detail-list ul li { 
+    line-height: 1.5rem;
+    font-size: .875rem; 
+    opacity: .5;
+    color: #fff; 
+}
+
+.company-detail-list .logo-w { 
+    margin-bottom: 1.25rem; 
+}
+
+.greeting-ceo p { 
+    margin-top: 1.5rem;
+    line-height: 1.625rem; 
+}
+
+.greeting-ceo .ceo-sign-img { 
+    max-width: 170px; 
+    margin-top: 1.875rem; 
+}
+
+.certification-list { 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.certification-list ul { 
+    display: inline-flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto; 
+}
+
+.certification-list ul li { 
+    display: inline-block; 
+    max-width: 25%; 
+    padding: 0 1.5rem 3.75rem; 
+    text-align: center;
+}
+
+.certification-list .certi-img { 
+    background-color: #EBEBEB; 
+    width: 100%; 
+    min-width: 165px; 
+    margin-bottom: .75rem; 
+    box-shadow: 0px 6px 12px #00000029;
+}
+
+.customer-list {
+    box-shadow: 0px 6px 12px #00000029;
+    border-radius: 10px;
+}
+
+.customer-list ul { 
+    display: flex; 
+    flex-wrap: wrap;
+    margin-left: -1%; 
+}
+
+.customer-list ul li { 
+    min-width: 24%; 
+    margin-left: 1%; 
+    margin-bottom: 1.875rem; 
+    text-align: center;
+}
+
+.contact-list ul li + li { margin-top: 3.75rem; }
+.contact-list ul li h3 { margin-bottom: .375rem; }
+
+.contact-list ul li p { line-height: 1.625rem; }
+
+.contact-list ul li button { margin-top: 1.25rem; }
+
+.surgery-adv ul { 
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.surgery-adv ul li { width: 24%; }
+.surgery-adv ul li { margin-left: 1%; }
+
+.surgery-side-effect .card-content .img-box, 
+.surgery-safe .card-content .img-box {
+    margin-left: 2.5rem; 
+}
+
+.surgery-side-effect .card-content div:not(.img-box), 
+.surgery-safe .card-content div:not(.img-box) { 
+    text-align: right;
+}
+
+.surgery-effect .card-content .img-box, 
+.surgery-light .card-content .img-box {
+    margin-right: 2.5rem; 
+}
+
+.card-group { 
+    display: flex; 
+    flex-wrap: wrap;
+    margin-left: -3rem; 
+}
+
+.card-group .card { 
+    width: 30.33%; 
+    margin-left: 3%; 
+    margin-bottom: 3.75rem; 
+}
+
+.card-group .card .card-img { 
+    display: flex; 
+    margin-bottom: 1.25rem; 
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.card-group .card h4 { 
+    margin-bottom: .375rem; 
+}
+
+.card-group .card button { 
+    margin-top: 1.25rem; 
+}
+
+.card-group .card p { 
+    display: flex; 
+    margin-bottom: .625rem; 
+    line-height: 1.125rem; 
+}
+
+.card-group .card p small { 
+    font-size: .75rem; 
+}
+
+[class*="-filter"] { margin-bottom: 1.25rem; }
+[class*="-filter"] .search { margin-left: .625rem; }
+
+.answer-icon { 
+    display: inline-block; 
+    width: 8px; 
+    height: 6px; 
+    margin-right: .375rem; 
+    margin-bottom: .188rem; 
+    border-left: 1px solid currentColor; 
+    border-bottom: 1px solid currentColor; 
+}
+
+.precaution { 
+    background-color: #EBEBEB; 
+    line-height: 1rem; 
+    padding: .875rem 1.875rem; 
+    font-size: .625rem; 
+}
+
+.study-detail-info { 
+    height: 100%; 
+    line-height: 1.625rem; 
+    max-height: 400px; 
+    padding: .875rem 1.25rem; 
+    border: 1px solid #E0E0E0; 
+    border-radius: .25rem;
+    overflow: hidden auto; 
+}
+
+.study-detail-info h4 { font-weight: 700; }
+
+.study-detail-info .class-name { margin-bottom: 1.875rem; }
+
+.address-filter { 
+    display: flex; 
+    align-items: flex-end;
+}
+
+.address-filter p { 
+    font-size: .875rem; 
+}
+
+.address-list { 
+    height: 100%; 
+    max-height: 200px; 
+    border: 1px solid #E0E0E0; 
+    border-radius: .25rem;
+}
+
+.over-label { 
+    margin-bottom: .675rem; 
+    font-size: .875rem; 
+}
+
+.card-content.row { 
+    display: flex; 
+    align-items: flex-start; 
+}
+
+.card-content.row > * { flex: 1; }
+
+.card-content.row .img-box { flex: 1.5; }
+
+.surgery-intro { 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: auto; 
+    border-radius: .625rem;
+    box-shadow: 0px 10px 20px #00000029;
+}
+
+.surgery-intro .card-content.surgery .surgery-compare { 
+    display: flex; 
+    align-items: center;
+    margin-bottom: 1.875rem; 
+}
+
+.surgery-intro .card-content.surgery .surgery-compare span { 
+    margin: 0 .5rem;
+    font-size: 1.25rem; 
+    color: #9E9E9E;  
+}
+
+.surgery-intro .card-content.surgery p { 
+    line-height: 2.25rem; 
+    text-align: center; 
+}
+
+.surgery-intro .card-content.award { 
+    position: relative;
+    max-width:1000px; 
+    margin: auto; 
+    padding: 0 3.75rem; 
+    align-items: flex-end;
+    margin-left: 2.5rem; 
+}
+
+.surgery-intro .card-content.award::after { 
+    content: ''; 
+    background-color: #F4F7FB; 
+    width: 13.75rem; 
+    height: 13.75rem; 
+    border-radius: 50%;
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    
+}
+
+.surgery-intro .card-content.award .img-box { 
+    position: relative;
+    flex: 1; 
+}
+
+.surgery-intro .card-content.award .img-box::after { 
+    content: ''; 
+    display: block; 
+    position: absolute; 
+    top: 1rem; 
+    left: -2rem; 
+    background-color: #F4F7FB; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.surgery-intro .card-content.award .img-box img, 
+.surgery-intro .card-content.award .text-box { 
+    position: relative;
+    z-index: 10; 
+}
+
+.surgery-intro .card { 
+    padding: 5rem; 
+}
+
+.surgery-intro .card-header { 
+    margin-bottom: 3.75rem; 
+}
+
+.surgery-intro .card-header h3 { 
+    line-height: 2rem; 
+    text-align: center;
+    font-weight: 400; 
+    font-size: 1.375rem; 
+    color: #325FAB; 
+}
+
+.surgery-intro .card-header h3 strong { 
+    font-size: 1.625rem; 
+}
+
+.surgery-intro .card-content .sub { 
+    line-height: 1.625rem; 
+    font-size: 1.375rem; 
+}
+
+.surgery-intro .card-content h3 { 
+    line-height: 2.625rem; 
+    margin-bottom: 1.25rem; 
+    font-weight: 400; 
+    font-size: 2rem; 
+}
+
+.surgery-intro .card-content p { line-height: 1.625rem; }
+
+.surgery-intro .card-content p + p { margin-top: 1.25rem; }
+
+.product-info > div { padding: 1.8751rem; }
+
+.product-info .card { 
+    background-color: #fff; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 5rem 5rem 3.125rem; 
+    border-radius: .625rem; 
+    box-shadow: 0px 10px 20px #00000029;
+}
+
+.product-info .card .card-header { 
+    display: flex; 
+    align-items: flex-start;
+}
+
+.product-info .card .card-header > div { flex: 1; }
+
+.product-info .card .card-header h3 { 
+    line-height: 2.625rem; 
+    margin-bottom: 1.25rem; 
+    font-weight: 400; 
+    font-size: 1.625rem; 
+    color: #325FAB; 
+}
+.product-info .card .card-header ul li { 
+    line-height: 1.625rem;
+}
+
+.product-info .card .card-content .table-two { margin-left: 2.5rem; }
+
+.product-info .card .card-content h4 { 
+    margin-bottom: .625rem; 
+    color: #325FAB; 
+}
+
+.product-info .card .card-content table th { 
+    background-color: #F4F7FB; 
+    height: 3rem; 
+    font-size: .875rem; 
+    color: #052B4A; 
+}
+
+.product-info .card .card-content table td { 
+    height: 3rem; 
+    padding: 1rem; 
+    text-align: center;
+    border-bottom: 1px solid #EDEDED; 
+    font-size: .875rem; 
+}
+
+.modal.survey { 
+    padding: 4.375rem 1.25rem 2.5rem
+}
+
+#satisfactionModal .modal-body { 
+    padding: 1.25rem; 
+    border: 1px solid #EDEDED; 
+    border-radius: .25rem;
+}
+
+
+.survey-group ul li { font-size: .875rem; }
+.survey-group ul li + li { margin-top: 1.25rem; }
+.survey-group ul li p { margin-bottom: .625rem; }
+.survey-group ul li form { display: flex; }
+.survey-group ul li form .rdo + .rdo { margin-left: 1.25rem; }
+.survey-group ul li form .rdo { flex-shrink: 0; }
+.survey-group ul li form .rdo label::before { margin-right: .25rem; }
+
+.vnm-login.col, 
+.kor-login.row { display: none; }
+
+.kor-login.row.active, 
+.vnm-login.col.active { display: flex; }
+
+.vnm-login span { font-size: .875rem; }
+
+.terms { 
+    height: 100%; 
+    max-height: 530px; 
+    line-height: 1.375rem; 
+    overflow-y: auto; 
+    padding: 1.25rem; 
+    border: 1px solid #EDEDED; 
+    font-size: .75rem; 
+}
+
+.terms p + p { margin-top: 1.875rem; }
+
+.page.greeting .page-content.row { 
+    width: 100%; 
+    max-width: 1040px; 
+    margin: auto; 
+    margin-top: -2.5rem; 
+    padding: 2.5rem; 
+}
+
+.page.greeting .page-content { 
+    background: url('/img/ceo.png') no-repeat bottom right;
+}
+
+.page.greeting .content.text { flex: 1; }
+.page.greeting .content.text .greeting-img { max-width: 40rem; }
+
+.gnb-menu-btn {
+    display: none; 
+    width: 1.75rem; 
+    margin-left: auto; 
+    padding: 0;
+}
+
+@media (max-width: 1200px) { 
+
+    html, body { font-size: 14px; }
+
+    .page { padding: 6.25rem 5rem 12rem }
+    .crumble { margin-left: -2.5rem; }
+
+    section .history-card { 
+        max-width: 650px !important; 
+        flex-direction: column;
+        left: 0; 
+    }
+
+    .history-card .history-title-img { 
+        background: url('/img/history_text_left.png') no-repeat; 
+        width: 100%;
+        max-width: 18rem; 
+        height: 162px; 
+        background-size: contain; 
+        margin-bottom: 2.5rem;
+        margin-left: 6.5rem; 
+    }
+    .history-card .history-title-img img { display: none; }
+
+    .history-card ol::before { top: 0; }
+
+    .history-card ol > li:nth-child(2n) ul { 
+        transform: translateX(0); 
+    }
+
+    .history-card ol > li:nth-child(2n) li {
+        justify-content: flex-start;    
+    }
+
+    .notice-card { flex-direction: column; }
+
+    .notice-card .img-box { width: 80%; }
+
+    .notice-card .board { 
+        width: 80%; 
+        margin: 1.875rem auto; 
+    }
+
+    .gnb-menu-btn { display: block; }
+
+    .gnb-close-btn { 
+        display: block; 
+    }
+
+    .gnb-close-btn > img { 
+        margin: 1rem 2.5rem; 
+    }
+
+    .gnb-close-btn .btn-close { 
+        right: .5rem; 
+        top: 3.5rem; 
+        width: 3.5rem; 
+    }
+
+    .gnb-menu { 
+        display: none; 
+        position: fixed; 
+        top: 0; 
+        right: 0; 
+        background-color: #fff; 
+        width: 20rem; 
+        height: 100vh; 
+        padding-top: 2.5rem; 
+        border-left: 1px solid #EDEDED; 
+        z-index: 900;
+    }
+
+    .gnb-menu.active { display: block; }
+
+    .menu-box { 
+        justify-content: flex-start;
+        display: block; 
+        height: auto; 
+        margin: 0; 
+    }
+
+    .menu-box.active ul { display: inline-block; }
+    .menu-box.active .menu-item { 
+        border-bottom-color: #325FAB; 
+        color: #325FAB;
+    }
+    
+    .menu-box .menu-item { 
+        display: inline-block;
+        position: relative; 
+        height: 2.5rem; 
+        line-height: 2.5rem; 
+        margin-left: 2.5rem; 
+        padding: 0; 
+    }
+
+    .menu-box:not(.no-list)::before { 
+        content: ''; 
+        right: 18px; 
+        top: calc(1.25rem + 3px); 
+        transform: translateY(-50%); 
+        border-width: 6px; 
+        border-radius: 3px; 
+        border-style: solid; 
+        border-color: transparent; 
+        border-top-color: currentColor; 
+        position: absolute;
+    }
+
+    .menu-box:not(.no-list).active::before { 
+        border-color: transparent;
+        border-bottom-color: #325FAB;
+        top: calc(1.25rem - 3px); 
+    }
+
+    .menu-box ul { 
+        position: relative;
+        left: auto; 
+        top: auto; 
+        background-color: #F4F7FB; 
+        padding: 1.25rem 2.5rem; 
+    }
+
+    .certification-list ul li { max-width: 33%; }
+    .card-group { margin-left: -2%; }
+    .card-group .card { 
+        width: 48%; 
+        margin-left: 2%; 
+    }
+
+    .card-content.surgery .surgery-compare { 
+        flex-direction: column;
+    }
+
+    .surgery-intro .card.award { 
+        background-color:  #F2F7FF; 
+    }
+
+    .surgery-intro .card-content.award { 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0; 
+        margin-left: 0; 
+    }
+
+    
+
+    .surgery-side-effect .card-content, 
+    .surgery-safe .card-content {
+        flex-direction: column;
+    }
+
+    .surgery-effect .card-content, 
+    .surgery-light .card-content {
+        flex-direction: column-reverse;
+    }
+
+    .surgery-side-effect .card-content .img-box, 
+    .surgery-safe .card-content .img-box {
+        margin-left: 0; 
+        margin-top: 1.875rem;
+    }
+
+    .surgery-effect .card-content div:not(.img-box), 
+    .surgery-light .card-content div:not(.img-box),  
+    .surgery-side-effect .card-content div:not(.img-box), 
+    .surgery-safe .card-content div:not(.img-box) { 
+        width: 100%; 
+        text-align: center;
+    }
+
+    .surgery-effect .card-content .img-box, 
+    .surgery-light .card-content .img-box {
+        margin-right: 0; 
+        margin-top: 1.875rem;
+    }
+
+    .tab-content .row { flex-direction: column; }
+
+    .tab-btn + .tab-btn, 
+    .tab-content .review-text + .review-text { margin-left: 0; }
+
+    .tab-btn-group { padding: 0 1.875rem; }
+    .tab-content { padding: 0 1.875rem 12rem; }
+    .tab-content .review-text:nth-child(2) { margin-top: 2.5rem; }
+    .tab-content.review::before { left: 0; }
+
+    .customer-list ul { 
+        margin-left: -2%; 
+    }
+    
+    .customer-list ul li { 
+        min-width: 48%; 
+        margin-left: 2%;         
+    }
+
+    .surgery-intro .card-content.surgery .surgery-compare span { 
+        margin: 1rem 0; 
+    }
+}
+
+@media (max-width: 700px) { 
+
+    .page { padding: 2.5rem; }
+
+    .gnb-menu { width: 100%; }
+
+    .ocu-info-card { 
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .ocu-info-card div { margin-bottom: 1.25rem; }
+    .ocu-info-card p br { display: none !important; }
+
+    .ocu-product-card { flex-direction: column; }
+
+
+    .ocu-product-card .card-item img { max-width: 80%; }
+
+    .ocu-product-card .card-item + .card-item { margin-top: 1.875rem; }
+    .news-card { padding: 1.875rem; }
+    .board-list a { margin-right: 1.875rem; }
+    .board-list .register-date { flex-shrink: 0; }
+
+    .inquiry-card { 
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .inquiry-card div { width: 100% }
+
+    .inquiry-card .apply-btn { 
+        display: inline-block;
+        width: 100%; 
+        margin-top: 1.875rem; 
+    }
+
+    section .history-title { text-align: left; }
+    .history-card .history-title { 
+        width: 20rem; 
+        margin-left: 6.5rem; 
+    }
+    .history-card ol > li .date-circle { margin-left: 0; }
+    .history-card ol::before { 
+        top: -12rem; 
+        left: 1.875rem; 
+        height: calc(100% + 12rem); 
+    }
+
+    .crumble { display: none; }
+
+    .table td a { margin-bottom: .25rem;}
+
+    .certification-list ul li { max-width: 50%; }
+
+    .board-card table th, 
+    .board-card table td { 
+        height: auto; 
+        line-height: 1.25rem; 
+        padding: .875rem 1.25rem !important; 
+    }
+
+
+    .board-card:not(.board-content) table thead, 
+    .board-card:not(.board-content) table tbody tr td:first-child, 
+    .board-card:not(.board-content) table tbody tr td:nth-child(3), 
+    .board-card:not(.board-content) table tbody tr td:nth-child(4),
+    .board-card:not(.board-content) table tbody tr td:nth-child(5),
+    .board-card:not(.board-content) table tbody tr td:nth-child(6) { display: none; }
+
+    .board-content table thead th:nth-child(2),
+    .board-content table thead th:nth-child(3) { 
+        display: none; 
+    }
+
+    .table td { line-height: 1.875rem; }
+
+    .table .sub-box { display: flex; }
+
+    .table:not(.board-content) th:nth-child(2), 
+    .table td:nth-child(2) { padding-left: 0; }
+
+    footer { 
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer .company-detail-list { 
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.875rem; 
+    }
+
+    footer .company-detail-list li { text-align: center; }
+
+    .page-content.contact .content.row { flex-direction: column; }
+
+    .card-group { margin-left: 0; }
+    .card-group .card { 
+        width: 100%; 
+        margin-left: 0; 
+    }
+
+    .board-content-attach-file span { display: none; }
+    .board-content-attach-file button.download { 
+        padding: 0; 
+        text-align: left; 
+    }
+
+    .content.product-info .card-header { 
+        flex-direction: column-reverse;
+    }
+
+    .product-info .card .card-content { flex-direction: column; }
+    .product-info .card .card-content > div { width: 100%; }
+    .product-info .card .card-content .table-two { 
+        margin-top: 2.5rem; 
+        margin-left: 0; 
+    }
+
+    .pc-table { display: none; }
+    .mobile-table { 
+        width: 100%; 
+        display: table; 
+    }
+
+    .surgery-adv ul { margin-left: -2%; }
+    .surgery-adv ul li { width: 48%; }
+    .surgery-adv ul li { 
+        margin-left: 2% !important; 
+        margin-bottom: 2%; 
+    }
+
+    .survey-group ul li form { flex-direction: column; }
+    .survey-group ul li form .rdo + .rdo { 
+        margin-left: 0; 
+        margin-top: .625rem; 
+    }
+
+    .modal { 
+        height: 100vh; 
+        border-radius: 0;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal .modal-body { 
+        flex: 1; 
+        overflow: auto; 
+    }
+
+    form .item:not([class*="-login"]), 
+    form .item [class*="-input"] { 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form .item > label, 
+    form .item [class*="-input"] > label { 
+        margin-bottom: .625rem; 
+    }
+
+    form [class*="-input"].include-btn .btn { 
+        bottom: .5rem; 
+    }
+
+    form .no-label-item { padding-left: 0; }
+
+}

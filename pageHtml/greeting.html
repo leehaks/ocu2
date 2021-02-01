@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/import.css">
+</head>
+<body>
+    <header>
+        <div class="gnb-topbar">
+            <ul class="gnb-top-menu">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" aria-haspopup="true"><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</button>
+                        <ul class="dropdown-menu">
+                            <li role="option" tabindex="0"><span><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</span></li>
+                            <li role="option" tabindex="0"><span><img alt="베트남 국기" src="/img/vnm_flag.png"/> VNM</span></li>
+                            <li role="option" tabindex="0"><span><img alt="미국 국기" src="/img/eng_flag.svg"/> ENG</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 
+                    한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
+                 -->
+                
+                <li><a href="/pageHtml/login.html" >로그인</a></li>
+                <li><a href="/pageHtml/logup.html">회원가입</a></li>
+
+                <li class="hidden"><a href="/pageHtml/mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="/pageHtml/mypageVnm.html">마이페이지</a></li>
+            </ul>
+        </div>
+
+        <div class="gnb-menubar">
+            <a href="/index.html">
+                <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+            </a>
+
+            <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="/img/bar-icon.png" alt="메뉴아이콘" /></button>
+            <ul id="gnbMenu" class="gnb-menu">
+                <li class="gnb-close-btn">
+                    <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                    <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">기업 소개</span>
+                    <ul>
+                        <li><a href="/pageHtml/greeting.html">CEO 인사말</a></li>
+                        <li><a href="/pageHtml/history.html">연혁</a></li>
+                        <li><a href="/pageHtml/certification.html">인증 내역</a></li>
+                        <li><a href="/pageHtml/customerInfo.html">고객 병원 및 거래업체</a></li>
+                        <li><a href="/pageHtml/newsDataBoard.html">보도자료</a></li>
+                        <li><a href="/pageHtml/contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">제품 및 수술법</span>
+                    <ul>
+                        <li><a href="/pageHtml/productInfo.html">제품 소개</a></li>
+                        <li><a href="/pageHtml/surgeryInfo.html">수술법 소개</a></li>
+                        <li><a href="/pageHtml/reviewRecommend.html">수술 후기 및 추천</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">교육과정</span>
+                    <ul>
+                        <li><a href="/pageHtml/onlineStudy.html">온라인 교육</a></li>
+                        <li><a href="/pageHtml/offlineStudy.html">오프라인 교육</a></li>
+                        <li><a href="/pageHtml/studyDataBoard.html">학습 자료실</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box no-list">
+                    <a href="/pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">고객센터</span>
+                    <ul>
+                        <li><a href="/pageHtml/noticeBoard.html">공지사항</a></li>
+                        <li><a href="/pageHtml/questionAnwserBoard.html">Q&A</a></li>
+                        <li><a href="/pageHtml/freeBoard.html">자유게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div id="wrap">
+        <div class="page greeting">
+            <div class="page-title">
+                <h2 class="primary-text">CEO 인사말</h2>
+
+                <div class="crumble">
+                    <ul>
+                        <li><a href="" target="_self">기업 소개</a></li>
+                        <li><a href="" target="_self">CEO인사말</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content row">
+                <div class="content text">
+                    <div class="greeting-img">
+                        <img src="/img/greeting-text.png" alt="백내장 수술은 다르게, 안전하게 우리의 눈을 건강하게" />
+                    </div>
+                    <div class="greeting-ceo">
+                        <p>
+                            오큐라이트의 꿈은 <br/>
+                            우리 기술로 세상을 밝힐 세계적인 안과 전문 기업이 되는 것입니다. <br/>
+                            임상과 기초과학 분야의 아낌없는 투자와, <br/>
+                            열정적으로 연구에 매진하는 임직원들의 노력으로 <br/>
+                            우리는 이 꿈에 한 걸음 씩 다가가고 있습니다. 
+                        </p>
+                        <p>
+                            오큐라이트 전 임직원은 안과 분야 발전을 선도한다는 자부심을 안고 <br/>
+                            대한민국 안과 의료기기 산업에 새로운 변화의 바람을 이끌어 갈 것 입니다. 
+                        </p>
+                        <p>
+                            오큐라이트의 꿈이 실현되는 그날까지 최선을 다해 노력하겠습니다. <br/>
+                            감사합니다.
+                        </p>
+
+                        <div class="ceo-sign-img">
+                            <img src="/img/sign.jpg" alt="대표인사 서명이미지"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="company-detail-list">
+            <div class="logo-w">
+                <img src="/img/logo_w.png" alt="오큐라이트 로고"/>
+            </div>
+            <ul>
+                <li>㈜오큐라이트ㅣ 주소 경기도 성남시 성남대로 1342, 비111 (복정동, 가천대학교IT대학)</li>
+                <li>T. 031-8039-6177 E. oculight@oculight.co.kr</li>
+                <li>Copyright ⓒ oculight All Rights Reserved.</li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn">개인정보취급방침</button>
+            <button class="btn">이용약관</button>
+        </div>
+    </footer>
+    
+    <script src="/js/component.js"></script>    
+</body>
+</html>

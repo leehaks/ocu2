@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/import.css">
+</head>
+<body>
+    <div id="addressModal" class="modal-component">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>병의원 검색</h3>
+                <button onclick="modalClose(addressModal)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+            </div>
+            <div class="modal-body">
+                <div class="search block">
+                    <input type="text" placeholder="마음속내과" />
+                </div>
+
+                <div class="address-filter mt-20">
+                    <p><span class="text-primary">'마음속내과'</span> 검색 결과입니다.</p>
+                    <div></div>
+                </div>
+
+                <!-- 주소리스트 -->
+                <div class="address-list"></div>
+                
+                <form class="mt-30">
+                    <div class="over-label">찾으시는 병의원이 없을 경우, 직접 입력해주세요.</div>
+                    <div class="item mt-10">
+                        <div class="text-input include-btn">
+                            <input type="text" />
+                            <button class="btn primary-bg">직접입력</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/component.js"></script>    
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/import.css">
+</head>
+<body>
+    <header>
+        <div class="gnb-topbar">
+            <ul class="gnb-top-menu">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" aria-haspopup="true"><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</button>
+                        <ul class="dropdown-menu">
+                            <li role="option" tabindex="0"><span><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</span></li>
+                            <li role="option" tabindex="0"><span><img alt="베트남 국기" src="/img/vnm_flag.png"/> VNM</span></li>
+                            <li role="option" tabindex="0"><span><img alt="미국 국기" src="/img/eng_flag.svg"/> ENG</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 
+                    한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
+                 -->
+                
+                <li><a href="/pageHtml/login.html" >로그인</a></li>
+                <li><a href="/pageHtml/logup.html">회원가입</a></li>
+
+                <li class="hidden"><a href="/pageHtml/mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="/pageHtml/mypageVnm.html">마이페이지</a></li>
+            </ul>
+        </div>
+
+        <div class="gnb-menubar">
+            <a href="/index.html">
+                <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+            </a>
+
+            <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="/img/bar-icon.png" alt="메뉴아이콘" /></button>
+            <ul id="gnbMenu" class="gnb-menu">
+                <li class="gnb-close-btn">
+                    <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                    <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">기업 소개</span>
+                    <ul>
+                        <li><a href="/pageHtml/greeting.html">CEO 인사말</a></li>
+                        <li><a href="/pageHtml/history.html">연혁</a></li>
+                        <li><a href="/pageHtml/certification.html">인증 내역</a></li>
+                        <li><a href="/pageHtml/customerInfo.html">고객 병원 및 거래업체</a></li>
+                        <li><a href="/pageHtml/newsDataBoard.html">보도자료</a></li>
+                        <li><a href="/pageHtml/contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">제품 및 수술법</span>
+                    <ul>
+                        <li><a href="/pageHtml/productInfo.html">제품 소개</a></li>
+                        <li><a href="/pageHtml/surgeryInfo.html">수술법 소개</a></li>
+                        <li><a href="/pageHtml/reviewRecommend.html">수술 후기 및 추천</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">교육과정</span>
+                    <ul>
+                        <li><a href="/pageHtml/onlineStudy.html">온라인 교육</a></li>
+                        <li><a href="/pageHtml/offlineStudy.html">오프라인 교육</a></li>
+                        <li><a href="/pageHtml/studyDataBoard.html">학습 자료실</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box no-list">
+                    <a href="/pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">고객센터</span>
+                    <ul>
+                        <li><a href="/pageHtml/noticeBoard.html">공지사항</a></li>
+                        <li><a href="/pageHtml/questionAnwserBoard.html">Q&A</a></li>
+                        <li><a href="/pageHtml/freeBoard.html">자유게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div id="wrap">
+        <div class="page">
+            <div class="page-title">
+                <h2 class="primary-text">회원가입</h2>
+            </div>
+            <div class="page-content">
+                <div class="content">
+                    <form>
+                        <div class="text-input item">
+                            <label>이름</label>
+                            <input type="text" />
+                        </div>
+
+                        <div class="item">
+                            <div class="text-input include-btn">
+                                <label>소속병원</label>
+                                <input type="text" />
+                                <button class="btn primary-bg">변경</button>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="text-input include-btn">
+                                <label>휴대폰번호</label>
+                                <input type="text" />
+                                <button class="btn primary-bg">변경</button>
+                            </div>
+                        </div>
+
+                        <div class="text-input item mt-30">
+                            <label>E-mail(ID)</label>
+                            <input type="text" placeholder="oculight@oculight.co.kr" />
+                        </div>
+
+                        <div class="password-input item">
+                            <label>현재 비밀번호</label>
+                            <input type="password" autocomplete="off" />
+                        </div>
+
+                        <div class="password-input item mt-30">
+                            <label>새 비밀번호</label>
+                            <input type="password" autocomplete="off" />
+                        </div>
+
+                        <div class="password-input item">
+                            <label>비밀번호 확인</label>
+                            <input type="password" autocomplete="off" />
+                        </div>
+
+                        <div class="rdo-group item mt-30">
+                            <label>성별</label>
+                            <div class="row">
+                                <div class="rdo">
+                                    <input id="manSelect" type="radio" name="gender" checked />
+                                    <label for="manSelect">남</label>
+                                </div>
+                                <div class="rdo">
+                                    <input id="womanSelect" type="radio" name="gender" />
+                                    <label for="womanSelect">여</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rdo-group item mt-30">
+                            <label>SMS 수신여부</label>
+                            <div class="row">
+                                <div class="rdo">
+                                    <input id="yesSMsRdo" type="radio" name="receive" />
+                                    <label for="yesSMsRdo">예</label>
+                                </div>
+                                <div class="rdo">
+                                    <input id="noSMsRdo" type="radio" name="receive" checked />
+                                    <label for="noSMsRdo">아니요</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="form-explain no-label-item">[예]에 체크하시면 업데이트되는 온/오프라인 교육 소식을 받아보실 수 있습니다.</p>
+
+                        <div class="item mt-30 row center middle">
+                            <button type="submit" class="btn primary-bg">수정 완료</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="company-detail-list">
+            <div class="logo-w">
+                <img src="/img/logo_w.png" alt="오큐라이트 로고"/>
+            </div>
+            <ul>
+                <li>㈜오큐라이트ㅣ 주소 경기도 성남시 성남대로 1342, 비111 (복정동, 가천대학교IT대학)</li>
+                <li>T. 031-8039-6177 E. oculight@oculight.co.kr</li>
+                <li>Copyright ⓒ oculight All Rights Reserved.</li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn">개인정보취급방침</button>
+            <button class="btn">이용약관</button>
+        </div>
+    </footer>
+    
+    <script src="/js/component.js"></script>    
+</body>
+</html>

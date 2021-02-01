@@ -1,0 +1,95 @@
+
+
+.hidden { display: none !important; }
+
+/* flex 값 */
+
+.row { display: flex; }
+.col { display: flex; flex-direction: column; }
+
+.row.top { align-items: flex-start; }
+.row.middle { align-items: center !important; }
+.row.bottom { align-items: flex-end; }
+
+.row.left { justify-content: flex-start; }
+.row.center { justify-content: center; }
+.row.right { justify-content: flex-end; }
+
+.col.top { justify-content: flex-start; }
+.col.middle { justify-content: center; }
+.col.bottom { justify-content: flex-end; }
+
+.col.left { align-items: flex-start; }
+.col.center { align-items: center; }
+.col.right { align-items: flex-end; }
+
+.flex-1 { flex: 1 0 0; }
+.flex-2 { flex: 2 0 0; }
+.flex-3 { flex: 3 0 0; }
+.flex-4 { flex: 4 0 0; }
+.flex-5 { flex: 5 0 0; }
+
+/* color */
+
+.light-blue-bg { background-color: #F2F7FF; }
+.primary-text { color: #325FAB; }
+.primary-bg { 
+    background: #325FAB; 
+    color: #fff; 
+}
+
+/* margin, padding 값 */
+
+.ml-auto { margin-left: auto !important; }
+.mr-auto { margin-right: auto; }
+
+.mt-20 { margin-top: 1.25rem !important; }
+.mb-20 { margin-bottom: 1.25rem !important; }
+.ml-20 { margin-left: 1.25rem !important; }
+.mr-20 { margin-right: 1.25rem !important; }
+
+.mt-30 { margin-top: 1.875rem !important; }
+.mb-30 { margin-bottom: 1.875rem !important; }
+.ml-30 { margin-left: 1.875rem !important; }
+.mr-30 { margin-right: 1.875rem !important; }
+
+.mt-40 { margin-top: 2.5rem !important; }
+.mb-40 { margin-bottom: 2.5rem !important; }
+.ml-40 { margin-left: 2.5rem !important; }
+.mr-40 { margin-right: 2.5rem !important; }
+
+.ml-60 { margin-left: 3.75rem !important; }
+.mb-60 { margin-bottom: 3.75rem !important; }
+
+.pv-10 { padding-top: .625rem; padding-bottom: .625rem;  }
+
+.pt-30 { padding-top: 1.875rem; }
+.pb-30 { padding-bottom: 1.875rem; }
+.p-30 { padding: 1.875rem; }
+
+.pt-60 { padding-top: 3.75rem; }
+.pb-60 { padding-bottom: 3.75rem; }
+.pv-60 { padding-top: 3.75rem; padding-bottom: 3.75rem;  }
+.ph-60 { padding-left: 3.75rem; padding-right: 3.75rem; }
+.p-60 { padding: 3.75rem; }
+
+.pb-120 { padding-bottom: 7.5rem; }
+
+/* font-size */
+
+.font-20 { font-size: 1.25rem; }
+.font-50 { font-size: 3.125rem; }
+
+/* text */
+
+.text-ellipsis { 
+    display: inline-block; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+}
+
+.text-left { text-align: left !important; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+

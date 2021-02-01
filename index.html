@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/import.css">
+</head>
+<body>
+
+    <header>
+        <div class="gnb-topbar">
+            <ul class="gnb-top-menu">
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" aria-haspopup="true"><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</button>
+                        <ul class="dropdown-menu">
+                            <li role="option" tabindex="0"><span><img alt="대한민국 국기" src="/img/kor_flag.png"/> KOR</span></li>
+                            <li role="option" tabindex="0"><span><img alt="베트남 국기" src="/img/vnm_flag.png"/> VNM</span></li>
+                            <li role="option" tabindex="0"><span><img alt="미국 국기" src="/img/eng_flag.svg"/> ENG</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 
+                    한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
+                 -->
+                
+                <li><a href="/pageHtml/login.html" >로그인</a></li>
+                <li><a href="/pageHtml/logup.html">회원가입</a></li>
+
+                <li class="hidden"><a href="/pageHtml/mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="/pageHtml/mypageVnm.html">마이페이지</a></li>
+            </ul>
+        </div>
+
+        <div class="gnb-menubar">
+            <a href="/index.html">
+                <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+            </a>
+
+            <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="/img/bar-icon.png" alt="메뉴아이콘" /></button>
+            <ul id="gnbMenu" class="gnb-menu">
+                <li class="gnb-close-btn">
+                    <img src="/img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                    <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">기업 소개</span>
+                    <ul>
+                        <li><a href="/pageHtml/greeting.html">CEO 인사말</a></li>
+                        <li><a href="/pageHtml/history.html">연혁</a></li>
+                        <li><a href="/pageHtml/certification.html">인증 내역</a></li>
+                        <li><a href="/pageHtml/customerInfo.html">고객 병원 및 거래업체</a></li>
+                        <li><a href="/pageHtml/newsDataBoard.html">보도자료</a></li>
+                        <li><a href="/pageHtml/contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">제품 및 수술법</span>
+                    <ul>
+                        <li><a href="/pageHtml/productInfo.html">제품 소개</a></li>
+                        <li><a href="/pageHtml/surgeryInfo.html">수술법 소개</a></li>
+                        <li><a href="/pageHtml/reviewRecommend.html">수술 후기 및 추천</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">교육과정</span>
+                    <ul>
+                        <li><a href="/pageHtml/onlineStudy.html">온라인 교육</a></li>
+                        <li><a href="/pageHtml/offlineStudy.html">오프라인 교육</a></li>
+                        <li><a href="/pageHtml/studyDataBoard.html">학습 자료실</a></li>
+                    </ul>
+                </li>
+                <li class="menu-box no-list">
+                    <a href="/pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                </li>
+                <li class="menu-box">
+                    <span class="menu-item">고객센터</span>
+                    <ul>
+                        <li><a href="/pageHtml/noticeBoard.html">공지사항</a></li>
+                        <li><a href="/pageHtml/questionAnwserBoard.html">Q&A</a></li>
+                        <li><a href="/pageHtml/freeBoard.html">자유게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div id="wrap">
+        <section class="pb-60">
+            <div class="slider-component">
+                <div class="slider-box">
+                    <div class="slider-page active">
+                        <div class="slider-text">
+                            <h2>Happy i<br/>Cataract Surgery</h2>
+                            <p>
+                                백내장 수술을 안전하게 <br/>
+                                우리 눈을 건강하게 <br/>
+                                우리 삶을 행복하게
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-page">
+                        <div class="slider-text">
+                            <h2>Happy i<br/>Cataract Surgery</h2>
+                            <p>
+                                백내장 수술을 안전하게 <br/>
+                                우리 눈을 건강하게 <br/>
+                                우리 삶을 행복하게
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider-page">
+                        <div class="slider-text">
+                            <h2>Happy i<br/>Cataract Surgery</h2>
+                            <p>
+                                백내장 수술을 안전하게 <br/>
+                                우리 눈을 건강하게 <br/>
+                                우리 삶을 행복하게
+                            </p>
+                        </div>
+                    </div>            
+                </div>
+        
+                <div class="slider-dot"></div>
+                <div class="slider-btn">
+                    <span class="arrow-btn left"><img src="/img/arrow_left.png"/></span>
+                    <span class="arrow-btn right"><img src="/img/arrow_right.png"/></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 로그인 되었을 경우 아래 hidden 제거해주세요. 온라인교육 섹션입니다 -->
+
+        <section class="pt-60 hidden">
+            <h3 class="section-title">온라인 교육</h3>
+            <div class="online-card">
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h4>백내장 수술 기본-01</h4>
+                        <p>아이챠퍼란 무엇인가?</p>
+                        <button class="btn border">교육신청</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h4>백내장 수술 기본-01</h4>
+                        <p>아이챠퍼란 무엇인가?</p>
+                        <button class="btn border">교육신청</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h4>백내장 수술 기본-01</h4>
+                        <p>아이챠퍼란 무엇인가?</p>
+                        <button class="btn border">교육신청</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h4>백내장 수술 기본-01</h4>
+                        <p>아이챠퍼란 무엇인가?</p>
+                        <button class="btn border">교육신청</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h4>백내장 수술 기본-01</h4>
+                        <p>아이챠퍼란 무엇인가?</p>
+                        <button class="btn border">교육신청</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h4>백내장 수술 기본-01</h4>
+                        <p>아이챠퍼란 무엇인가?</p>
+                        <button class="btn border">교육신청</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-60">
+            <div class="ocu-info-card">
+                <div><img src="/img/ocu-info.png" alt="오큐라이드 아이챠퍼 보건 신기술 인증 획득"/></div>
+                <p>
+                    세계 최초로 개발된 국내 기술로 우수한 효과와 성능을 인증받아<br/>
+                    보건복지부 장관과 한국보건산업진흥원장이 수여하는<br/>
+                    보건신기술(NET, New Excellent Technology)인증을 획득했습니다.
+                </p>
+            </div>
+        </section>
+
+        <section class="p-60">
+            <h3 class="section-title">Product</h3>
+            <div class="ocu-product-card">
+                <div class="card-item">
+                    <img src="/img/iChopper.png" alt="아이챠퍼로써 백내장 수술용 안내조명챠퍼" />
+                    <h3>아이챠퍼 (iChopper)</h3>
+                    <p>백내장 수술용 안내조명챠퍼</p>
+                </div>
+                <div class="card-item">
+                    <img src="/img/iProbe.png" alt="아이챠퍼로써 백내장 수술용 안내조명챠퍼" />
+                    <h3>아이프로브 (iProbe)</h3>
+                    <p>망막 수술용 일루미네이션 프로브</p>
+                </div>
+                <div class="card-item">
+                    <img src="/img/iVision.png" alt="아이챠퍼로써 백내장 수술용 안내조명챠퍼" />
+                    <h3>아이비전 (iVision)</h3>
+                    <p>오큐라이트 전용 광원장치</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-60 light-blue-bg">
+            <h3 class="history-title section-title">History</h3>
+            <div class="history-card">
+                <div class="history-title-img"><img src="/img/history_text_right.png" alt="세계적인 안과 전문 기업으로 도약하는 오큐라이트" /></div>
+                <ol>
+                    <li>
+                        <span class="date-circle">2020</span>
+                        <ul>
+                            <li>망막수술용 일루미네이션 프로브(1회용) 보험등재 확정</li>
+                            <li>공정개발 및 생산 체계 구축</li>
+                            <li>전용 광원장치 출시</li>
+                            <li>CTS 베트남 사업 협약</li>
+                            <li>백내장수술용 안내(眼內)아이챠퍼(iChopper) 출시 </li>
+                            <li>“혁신기업 국가대표1000”에 선정</li>
+                            <li>기업부설연구소 설립 (성남시)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="date-circle">2019</span>
+                        <ul>
+                            <li>한국 액셀러레이터 투자유치</li>
+                            <li>기술보증기금 19억 보증 확보 </li>
+                            <li>한국 인큐베이터 팁스(TIPS) 투자유치</li>
+                            <li>백내장수술용 안내(眼內)조명챠퍼(iChopper) 개발</li>
+                            <li>보건신기술(NET) 인증</li>
+                            <li>미국 법인 (OCU L&C Inc.) 설립</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="date-circle">2018</span>
+                        <ul>
+                            <li>기술 자문 및 공동 연구</li>
+                            <li>GMP 인증 & 의료기기 제조업 허가</li>
+                            <li>과학기술정보통신부, ‘시장연계 미래 바이오 기술개발' 과제 선정</li>
+                            <li>연구전담부서 설치</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="date-circle">2017</span>
+                        <ul>
+                            <li>회사 설립</li>
+                            <li>중소벤처기업부 '창업아이템사업화' 과제 선정</li>
+                            <li>안과 교수 및 의사(38명) 주주 참여</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="p-60">
+            <div class="news-card">
+                <div class="board">
+                    <div class="board-header">
+                        <h3>보도자료</h3>
+                        <a href="/pageHtml/newsDataBoard.html" target="_self" class="more-view-btn">+ 더보기</a>
+                    </div>
+                    <div class="board-list">
+                        <ul>
+                            <li><a href="/pageHtml/newsDataBoard.html" target="_self">[중앙일보] 오큐라이트, 백내장 수술기구 ‘안내조명차퍼’ 보건신기술 인증서 획득</a><span class="register-date">2019-12-27</span></li>
+                            <li><a href="/pageHtml/newsDataBoard.html" target="_self">[중앙일보] “안과의사로 쌓은 경험과 아이디어, 창업지원단 만나 벤처로 탄생”</a><span class="register-date">2019-12-27</span></li>
+                            <li><a href="/pageHtml/newsDataBoard.html" target="_self">[전자신문] 국산 백내장 수술 조명, 세계 시장 밝힌다</a><span class="register-date">2019-12-27</span></li>
+                            <li><a href="/pageHtml/newsDataBoard.html" target="_self">[전자신문] 국산 백내장 수술 조명, 세계 시장 밝힌다</a><span class="register-date">2019-12-27</span></li>
+                            <li><a href="/pageHtml/newsDataBoard.html" target="_self">[이데일리] 길병원 측 백내장 수술조명 개발 "연간 의료비용 240억 줄여“</a><span class="register-date">2019-12-27</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="light-blue-bg">
+            <div class="notice-card">
+                <div class="img-box">
+                    <img src="img/notice-board.png" alt="" />
+                </div>
+                <div class="board">
+                    <div class="board-header">
+                        <h3>공지사항</h3>
+                        <a href="/pageHtml/noticeBoard.html" target="_self" class="more-view-btn">+ 더보기</a>
+                    </div>
+                    <div class="board-list">
+                        <ul>
+                            <li><a href="/pageHtml/noticeBoardContent.html" target="_self">수강생 교육 수강 절차 안내-1</a><span class="register-date">2019-12-27</span></li>
+                            <li><a href="/pageHtml/noticeBoardContent.html" target="_self">시험 응시 유의사항-1</a><span class="register-date">2019-12-27</span></li>
+                            <li><a href="/pageHtml/noticeBoardContent.html" target="_self">수강생 교육 수강 절차 안내-2</a><span class="register-date">2019-12-27</span></li>
+                            <li><a href="/pageHtml/noticeBoardContent.html" target="_self">수강생 교육 수강 절차 안내-2</a><span class="register-date">2019-12-27</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        <section class="ph-60 pt-60 pb-120">
+            <div class="inquiry-card">
+                <div>
+                    <h3 class="section-title mb-20">고객센터</h3>
+                    <ul class="inquiry-list">
+                        <li><span>대표번호</span> <a href="tel:031-8039-6177">031-8039-6177</a></li>
+                        <li><span>문의</span> <a href="mailto:oculight@oculight.co.kr">oculight@oculight.co.kr</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <button onclick="modalOpen(wetlabApplyModal, event)" class="apply-btn">Wet-Lab 신청</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="company-detail-list">
+            <div class="logo-w">
+                <img src="/img/logo_w.png" alt="오큐라이트 로고"/>
+            </div>
+            <ul>
+                <li>㈜오큐라이트ㅣ 주소 경기도 성남시 성남대로 1342, 비111 (복정동, 가천대학교IT대학)</li>
+                <li>T. 031-8039-6177 E. oculight@oculight.co.kr</li>
+                <li>Copyright ⓒ oculight All Rights Reserved.</li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="modalOpen(termModal, event)" class="btn">개인정보취급방침</button>
+            <button onclick="modalOpen(termModal, event)" class="btn">이용약관</button>
+        </div>
+    </footer>
+
+    <div id="termModal" class="modal-component">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>이용약관</h3>
+                <button onclick="modalClose(termModal)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+            </div>
+            <div class="modal-body">
+                <div class="terms">
+                    <p>여러분은 본 약관을 읽고 동의하신 후 회원 가입을 신청하실 수 있으며, 네이버는 이에 대한 승낙을 통해 회원 가입 절차를 완료하고 여러분께 네이버 서비스 이용 계정(이하 ‘계정’)을 부여합니다. 계정이란 회원이 네이버 서비스에 로그인한 이후 이용하는 각종 서비스 이용 이력을 회원 별로 관리하기 위해 설정한 회원 식별 단위를 말합니다. </p>
+                    <p>회원은 자신의 계정을 통해 좀더 다양한 네이버 서비스를 보다 편리하게 이용할 수 있습니다. 이와 관련한 상세한 내용은 계정 운영정책 및 고객센터 내 네이버 회원가입 방법 등에서 확인해 주세요. </p>
+                    <p>네이버는 단체에 속한 여러 구성원들이 공동의 계정으로 네이버 서비스를 함께 이용할 수 있도록 단체회원 계정도 부여하고 있습니다. 단체회원 구성원들은 하나의 계정 및 아이디(ID)를 공유하되 각자 개별적으로 설정한 비밀번호를 입력하여 계정에 로그인하고 각종 서비스를 이용하게 됩니다. 단체회원은 관리자와 멤버로 구성되며, 관리자는 구성원 전부로부터 권한을 위임 받아 단체회원을 대표하고 단체회원 계정을 운용합니다. 따라서 관리자는 단체회원 계정을 통해 별도 약관 또는 기존 약관 개정에 대해 동의하거나 단체회원에서 탈퇴할 수 있고, 멤버들의 단체회원 계정 로그인 방법 및 이를 통한 게시물 게재 등 네이버 서비스 이용을 관리(게시물 삭제 포함)할 수 있습니다. 본 약관에서 규정한 사항은 원칙적으로 구성원 모두에게 적용되며, 각각의 구성원은 다른 구성원들의 단체회원 계정 및 아이디(ID)를 통한 서비스 이용에 관해 연대책임을 부담합니다. 단체회원 계정 사용에서의 관리자, 멤버 등의 권한 및 (공동)책임에 관한 사항 등은 계정 운영정책 및 고객센터 내 네이버 단체회원(단체 아이디) 소개 등에서 확인해 주시기 바랍니다. 여러분은 본 약관을 읽고 동의하신 후 회원 가입을 신청하실 수 있으며, 네이버는 이에 대한 승낙을 통해 회원 가입 절차를 완료하고 여러분께 네이버 서비스 이용 계정(이하 ‘계정’)을 부여합니다. </p>
+                    <p>계정이란 회원이 네이버 서비스에 로그인한 이후 이용하는 각종 서비스 이용 이력을 회원 별로 관리하기 위해 설정한 회원 식별 단위를 말합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wetlabApplyModal" class="modal-component">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Wet-Lab 신청</h3>
+                <p>신청 글을 남겨주시면 담당자가 확인 후 연락을 드리겠습니다.</p>
+                <button onclick="modalClose(wetlabApplyModal)" class="btn btn-close"><img src="/img/close.png" alt="닫기버튼"/></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="text-input item">
+                        <label>신청자명</label>
+                        <input type="text" placeholder="과정 명을 검색해보세요"/>
+                    </div>
+    
+                    <div class="text-input item">
+                        <label>연락처</label>
+                        <input type="text" placeholder="010-0000-0000"/>
+                    </div>
+    
+                    <div class="text-input item">
+                        <label>내용</label>
+                        <textarea placeholder="방문을 원하시는 날짜와 기타 질문사항을 남겨주세요."></textarea>
+                    </div>
+                </form>
+    
+                <div class="precaution mt-30">
+                    <ul>
+                        <li>1. 수집하는 개인정보 항목: 신청자명, 연락처, 내용 </li>
+                        <li>2. 개인정보의 수집 및 이용 목적 : 문의 사항 확인, 상담을 위한 연락 통지, 답변 내용 전달 및 제반 업무 </li>
+                        <li>3. 개인정보 보유·이용 기간 : 문의에 대한 답변 내용 전달 및 제반 업무 완료 시까지 </li>
+                        <li>4. 동의 거부 권리 안내 : 위와 같은 개인정보 수집 동의를 거부할 수 있습니다. 다만 동의를 거부하는 경우 문의 및 상담이 제한될 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+    
+                <form class="col center middle">
+                    <div class="chk mt-20">
+                        <input id="useAgreeChk" type="checkbox" />
+                        <label for="useAgreeChk">개인정보 수집/이용에 동의합니다.</label>
+                    </div>
+                    <button onclick="modalOpen(thanksToModal, event)" type="submit" class="btn primary-bg mt-30">신청하기</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="thanksToModal" class="modal-component">
+        <div class="modal">
+            <div class="modal-header">
+                <p>신청해주셔서 감사합니다.</p>
+                <p>빠른 시일 내에 안내 드리겠습니다.</p>
+            </div>
+            <div class="modal-footer">
+                <form class="col center middle">
+                    <button type="submit" class="btn primary-bg">닫기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/component.js"></script>    
+</body>
+</html>

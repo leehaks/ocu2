@@ -1,0 +1,43 @@
+@import url("reset.css"); 
+@import url("component.css"); 
+@import url("content.css"); 
+@import url("common.css"); 
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+@font-face { 
+    font-family: NotoSansKR-Black; 
+    font-style: normal; 
+    src: url(./font/NotoSansKR-Black.otf) fotmat('truetype'); 
+}
+
+@font-face { 
+    font-family: NotoSans-Bold; 
+    font-style: normal; 
+    src: url(./font/NotoSansKR-Bold.otf) fotmat('truetype'); 
+}
+
+@font-face { 
+    font-family: NotoSans-Light; 
+    font-style: normal; 
+    src: url(./font/NotoSansKR-Light.otf) fotmat('truetype'); 
+}
+
+@font-face { 
+    font-family: "NotoSans-Medium"; 
+    font-style: normal; 
+    src: url(/font/NotoSansKR-Medium.otf) fotmat('truetype'); 
+}
+
+@font-face { 
+    font-family: NotoSans-Regular; 
+    font-style: normal; 
+    src: url(./font/NotoSansKR-Regular.otf) fotmat('truetype'); 
+}
+
+@font-face { 
+    font-family: NotoSans-Thin; 
+    font-style: normal; 
+    src: url(./font/NotoSansKR-Thin.otf) fotmat('truetype'); 
+}
