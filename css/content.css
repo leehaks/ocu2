@@ -683,7 +683,7 @@ company-detail-list { margin-right: 1.875rem; }
 }
 
 .page.greeting .page-content { 
-    background: url('/img/ceo.png') no-repeat bottom right;
+    background: url('../img/ceo.png') no-repeat bottom right;
 }
 
 .page.greeting .content.text { flex: 1; }
@@ -703,14 +703,14 @@ company-detail-list { margin-right: 1.875rem; }
     .page { padding: 6.25rem 5rem 12rem }
     .crumble { margin-left: -2.5rem; }
 
-    section .history-card { 
+    .history-card { 
         max-width: 650px !important; 
         flex-direction: column;
-        left: 0; 
+        left: 0 !important; 
     }
 
     .history-card .history-title-img { 
-        background: url('/img/history_text_left.png') no-repeat; 
+        background: url('../img/history_text_left.png') no-repeat; 
         width: 100%;
         max-width: 18rem; 
         height: 162px; 
