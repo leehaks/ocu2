@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/import.css">
+</head>
+<body>
+    <header>
+        <div class="gnb-topbar">
+            <ul class="gnb-top-menu">
+                <li>
+                    <select id="language">
+                        <option value="korea"  data-imagesrc="../img/kor_flag.png">KOR</option>
+                        <option value="vietnam"  data-imagesrc="../img/vnm_flag.png">VNM</option>
+                        <option value="english" data-imagesrc="../img/eng_flag.svg">ENG</option>
+                    </select>
+                </li>
+
+                <!-- 
+                    한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
+                 -->
+                
+                <li><a href="./login.html" >로그인</a></li>
+                <li><a href="./logup.html">회원가입</a></li>
+
+                <li class="hidden"><a href="./mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="./mypageVnm.html">마이페이지</a></li>
+            </ul>
+        </div>
+
+        <div class="gnb-menubar">
+            <div class="gnb-bottom-menu">
+
+                <a href="../index.html">
+                    <img src="../img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                </a>
+    
+                <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="../img/bar-icon.png" alt="메뉴아이콘" /></button>
+                <ul id="gnbMenu" class="gnb-menu">
+                    <li class="gnb-close-btn">
+                        <img src="../img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                        <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="../img/close.png" alt="닫기버튼"/></button>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./greeting.html">기업 소개</a></span>
+                        <ul>
+                            <li><a href="./greeting.html">CEO 인사말</a></li>
+                            <li><a href="./history.html">연혁</a></li>
+                            <li><a href="./certification.html">인증 내역</a></li>
+                            <li><a href="./customerInfo.html">고객 병원 및 거래업체</a></li>
+                            <li><a href="./newsDataBoard.html">보도자료</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./productInfo.html">제품 및 수술법</a></span>
+                        <ul>
+                            <li><a href="./productInfo.html">제품 소개</a></li>
+                            <li><a href="./surgeryInfo.html">수술법 소개</a></li>
+                            <li><a href="./reviewRecommend.html">수술 후기 및 추천</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./onlineStudy.html">교육과정</a></span>
+                        <ul>
+                            <li><a href="./onlineStudy.html">온라인 교육</a></li>
+                            <li><a href="./offlineStudy.html">오프라인 교육</a></li>
+                            <li><a href="./studyDataBoard.html">학습 자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box no-list">
+                        <a href="./mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./noticeBoard.html">고객센터</a></span>
+                        <ul>
+                            <li><a href="./noticeBoard.html">공지사항</a></li>
+                            <li><a href="./questionAnwserBoard.html">Q&A</a></li>
+                            <li><a href="./freeBoard.html">자유게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div id="wrap">
+        <div class="page remove-padding">
+            <div class="page-title">
+                <h2 class="primary-text">자유게시판</h2>
+
+                <div class="crumble">
+                    <ul>
+                        <li><a href="" target="_self">고객센터</a></li>
+                        <li><a href="" target="_self">자유게시판</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content">                
+                <div class="content">
+                    <div class="board-card table">
+                        <table>                            
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">이름</td>
+                                    <td class="text-center making-name">홍길동</td>
+                                </tr>
+                                <tr class="insert-td">
+                                    <td class="text-center">제목</td>
+                                    <td class="text-center"><input type="text" placeholder="텍스트영역" /></td>
+                                </tr>
+                                <tr class="insert-td">
+                                    <td class="text-center">내용</td>
+                                    <td class="textarea-td text-center">
+                                        <textarea>텍스트영역</textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="rdo-group row middle">
+                                                <div class="rdo">
+                                                    <input id="publicRdo" type="radio" name="disclosureStatus" checked />
+                                                    <label for="publicRdo">공개</label>
+                                                </div>
+                                                <div class="rdo">
+                                                    <input id="privateRdo" type="radio" name="disclosureStatus" />
+                                                    <label for="privateRdo" >비공개</label>
+                                                </div>
+                                            </div>
+                                            <div class="password ml-30">
+                                                <input type="password" placeholder="비밀번호"/>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="mt-20 text-right">
+                            <a href="./freeBoard.html" class="btn border">등록</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="company-detail-list">
+            <div class="logo-w">
+                <img src="../img/logo_w.png" alt="오큐라이트 로고"/>
+            </div>
+            <ul>
+                <li>㈜오큐라이트ㅣ 주소 경기도 성남시 성남대로 1342, 비111 (복정동, 가천대학교IT대학)</li>
+                <li>T. 031-8039-6177 E. oculight@oculight.co.kr</li>
+                <li>Copyright ⓒ oculight All Rights Reserved.</li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn">개인정보취급방침</button>
+            <button class="btn">이용약관</button>
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+    <script src="../js/component.js"></script>     
+</body>
+</html>

@@ -11,83 +11,83 @@
         <div class="gnb-topbar">
             <ul class="gnb-top-menu">
                 <li>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" aria-haspopup="true"><img alt="대한민국 국기" src="../img/kor_flag.png"/> KOR</button>
-                        <ul class="dropdown-menu">
-                            <li role="option" tabindex="0"><span><img alt="대한민국 국기" src="../img/kor_flag.png"/> KOR</span></li>
-                            <li role="option" tabindex="0"><span><img alt="베트남 국기" src="../img/vnm_flag.png"/> VNM</span></li>
-                            <li role="option" tabindex="0"><span><img alt="미국 국기" src="../img/eng_flag.svg"/> ENG</span></li>
-                        </ul>
-                    </div>
+                    <select id="language">
+                        <option value="korea"  data-imagesrc="../img/kor_flag.png">KOR</option>
+                        <option value="vietnam"  data-imagesrc="../img/vnm_flag.png">VNM</option>
+                        <option value="english" data-imagesrc="../img/eng_flag.svg">ENG</option>
+                    </select>
                 </li>
 
                 <!-- 
                     한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
                  -->
                 
-                <li><a href="/pageHtml/login.html" >로그인</a></li>
-                <li><a href="/pageHtml/logup.html">회원가입</a></li>
+                <li><a href="./login.html" >로그인</a></li>
+                <li><a href="./logup.html">회원가입</a></li>
 
-                <li class="hidden"><a href="/pageHtml/mypageKor.html">마이페이지</a></li>
-                <li class="hidden"><a href="/pageHtml/mypageVnm.html">마이페이지</a></li>
+                <li class="hidden"><a href="./mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="./mypageVnm.html">마이페이지</a></li>
             </ul>
         </div>
 
         <div class="gnb-menubar">
-            <a href="../index.html">
-                <img src="../img/logo.png" alt="오큐라이트 홈페이지 이동" />
-            </a>
+            <div class="gnb-bottom-menu">
 
-            <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="../img/bar-icon.png" alt="메뉴아이콘" /></button>
-            <ul id="gnbMenu" class="gnb-menu">
-                <li class="gnb-close-btn">
+                <a href="../index.html">
                     <img src="../img/logo.png" alt="오큐라이트 홈페이지 이동" />
-                    <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="../img/close.png" alt="닫기버튼"/></button>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">기업 소개</span>
-                    <ul>
-                        <li><a href="./greeting.html">CEO 인사말</a></li>
-                        <li><a href="./history.html">연혁</a></li>
-                        <li><a href="./certification.html">인증 내역</a></li>
-                        <li><a href="./customerInfo.html">고객 병원 및 거래업체</a></li>
-                        <li><a href="./newsDataBoard.html">보도자료</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                    </ul>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">제품 및 수술법</span>
-                    <ul>
-                        <li><a href="./productInfo.html">제품 소개</a></li>
-                        <li><a href="./surgeryInfo.html">수술법 소개</a></li>
-                        <li><a href="./reviewRecommend.html">수술 후기 및 추천</a></li>
-                    </ul>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">교육과정</span>
-                    <ul>
-                        <li><a href="./onlineStudy.html">온라인 교육</a></li>
-                        <li><a href="./offlineStudy.html">오프라인 교육</a></li>
-                        <li><a href="./studyDataBoard.html">학습 자료실</a></li>
-                    </ul>
-                </li>
-                <li class="menu-box no-list">
-                    <a href="/pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">고객센터</span>
-                    <ul>
-                        <li><a href="./noticeBoard.html">공지사항</a></li>
-                        <li><a href="./questionAnwserBoard.html">Q&A</a></li>
-                        <li><a href="./freeBoard.html">자유게시판</a></li>
-                    </ul>
-                </li>
-            </ul>
+                </a>
+    
+                <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="../img/bar-icon.png" alt="메뉴아이콘" /></button>
+                <ul id="gnbMenu" class="gnb-menu">
+                    <li class="gnb-close-btn">
+                        <img src="../img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                        <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="../img/close.png" alt="닫기버튼"/></button>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./greeting.html">기업 소개</a></span>
+                        <ul>
+                            <li><a href="./greeting.html">CEO 인사말</a></li>
+                            <li><a href="./history.html">연혁</a></li>
+                            <li><a href="./certification.html">인증 내역</a></li>
+                            <li><a href="./customerInfo.html">고객 병원 및 거래업체</a></li>
+                            <li><a href="./newsDataBoard.html">보도자료</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./productInfo.html">제품 및 수술법</a></span>
+                        <ul>
+                            <li><a href="./productInfo.html">제품 소개</a></li>
+                            <li><a href="./surgeryInfo.html">수술법 소개</a></li>
+                            <li><a href="./reviewRecommend.html">수술 후기 및 추천</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./onlineStudy.html">교육과정</a></span>
+                        <ul>
+                            <li><a href="./onlineStudy.html">온라인 교육</a></li>
+                            <li><a href="./offlineStudy.html">오프라인 교육</a></li>
+                            <li><a href="./studyDataBoard.html">학습 자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box no-list">
+                        <a href="./mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="./noticeBoard.html">고객센터</a></span>
+                        <ul>
+                            <li><a href="./noticeBoard.html">공지사항</a></li>
+                            <li><a href="./questionAnwserBoard.html">Q&A</a></li>
+                            <li><a href="./freeBoard.html">자유게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     
     <div id="wrap">
-        <div class="page">
+        <div class="page remove-padding">
             <div class="page-title">
                 <h2 class="primary-text">수술법 소개</h2>
 
@@ -108,10 +108,10 @@
                             </h3>
                         </div>
                         <div class="card-content surgery">
-                            <div class="surgery-compare">
-                                <div><img src="../img/surgery_1.png" alt="기존 백내장 수술" /></div>
+                            <div class="surgery-compare w-full">
+                                <div class="flex-1"><img src="../img/surgery_1.png" alt="기존 백내장 수술" /></div>
                                 <span>VS</span>
-                                <div><img src="../img/surgery_2.png" alt="해피아이 백내장 수술" /></div>
+                                <div class="flex-1"><img src="../img/surgery_2.png" alt="해피아이 백내장 수술" /></div>
                             </div>
                             <p>백내장 수술 중에는 눈을 감을 수 없어 강한 현미경 빛을 마주보는 것을 괴로워하는 환자들이 많습니다. <br/>
                             해피아이 백내장 수술은 <strong class="primary-text">안구 내 조명 '아이챠퍼'</strong>를 도입하여 <br/>
@@ -195,7 +195,7 @@
                             <div>
                                 <span class="sub">수술효과 UP!</span>
                                 <h3 class="primary-text">
-                                    <strong>우수한 효과와 성능</strong>을 인정받은 장비를 사용합니다
+                                    <strong>우수한 효과와 성능</strong>을<br/> 인정받은 장비를 사용합니다
                                 </h3>
                                 <p>오큐라이트의 안전한 백내장 수술기구 ‘아이챠퍼’는 새로운 안구 내 조명 기법을 통해 적은 빛으로 환부를 선명하고 입체적으로 비춰 기존 백내장 수술법을 한 단계 더 발전시켰습니다. </p>
                                 <p>
@@ -245,6 +245,8 @@
         </div>
     </footer>
     
-    <script src="../js/component.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+    <script src="../js/component.js"></script>     
 </body>
 </html>

@@ -5,6 +5,7 @@ header {
     left: 0; 
     right: 0; 
     z-index: 1000;
+    background-color: #fff; 
 }
 
 body.scroll-hidden { overflow: hidden; }
@@ -23,6 +24,7 @@ footer {
 }
 
 footer .btn-group .btn { flex-shrink: 0; }  
+footer .btn-group .btn:hover { color: #fff; }
  
 
 
@@ -40,17 +42,99 @@ section [class*="-card"] {
     margin: 0 auto; 
 }
 
+#noticeBoard a.dd-selected, 
+#studyBoard a.dd-selected { 
+    height: 2.5rem; 
+    border: 1px solid #E0E0E0; 
+    border-radius: .25rem;
+}
+
+#noticeBoard a.dd-option, 
+#studyBoard a.dd-option { 
+    background-color: #fff; 
+    color: #2E2E2E; 
+}
+
+#noticeBoard ul.dd-options, 
+#studyBoard ul.dd-options { 
+    border: 1px solid #E0E0E0; 
+    margin-top: -2px; 
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+div.dd-container { height: 100%; }
+
+div.dd-select { 
+    background-color: transparent !important; 
+    border: none; 
+}
+
+a.dd-selected { 
+    display: flex; 
+    align-items: center;
+    height: 40px; 
+    font-weight: 400;
+}
+
+img.dd-selected-image, 
+img.dd-option-image { margin-right: .625rem; }
+label.dd-selected-text { line-height: .875rem !important; }
+span.dd-pointer-down { border-top-color: #B8C9D6; }
+span.dd-pointer-up { border-bottom-color: #B8C9D6 !important; }
+
+ul.dd-options { box-shadow: none; border: none; }
+
+a.dd-option { 
+    background-color: #052B4A; 
+    height: 40px; 
+    line-height: 40px; 
+    border-bottom: 0; 
+    display: flex; 
+    align-items: center;
+    padding: .625rem; 
+    font-weight: 400;
+}
+
+a.dd-option:hover { 
+    background-color: #011D33; 
+    color: #B8C9D6; 
+}
+
 .download-icon { 
     width: 10px; 
     margin-right: 4px; 
 }
 
+label.dd-option-text { line-height: inherit !important; }
 
-.page { padding: 6.25rem 8.75rem 12rem; }
-.page.remove-padding { padding: 6.25rem 0 0; }
+
+.page { 
+    margin: auto; 
+    padding: 6.25rem 2.5rem 12rem; 
+}
+
+.page .page-title, 
+.page .page-content { 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.page .page-title { margin-bottom: 3.75rem; }
+
+.page.remove-padding,
+.page.full-screen { 
+    padding: 6.25rem 0 12rem;
+}
+
+.page.full-screen .page-content { 
+    width: 100%; 
+    max-width: 100%; 
+}
 
 .page-title { margin-bottom: 4.75rem; }
-.page.remove-padding .page-title { padding: 0 8.75rem; }
+.page.remove-padding .page-title { padding: 0; }
 
 
 .page-title h2 { 
@@ -66,7 +150,7 @@ section [class*="-card"] {
     justify-content: space-between;
     margin: 7.5rem auto; 
     padding: 1.875rem 3.75rem;
-    box-shadow: 0px 10px 20px #00000029;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
 
@@ -76,6 +160,8 @@ section [class*="-card"] {
 }
 
 .ocu-info-card p { 
+    display: -ms-flexbox;
+    justify-content: flex-end;    
     line-height: 1.625rem; 
     color: #444; 
 }
@@ -87,7 +173,9 @@ section [class*="-card"] {
 
 .ocu-product-card .card-item { 
     flex: 1; 
-    display: flex;
+    display: block; 
+    text-align: center;
+    display: -webkit-flex;
     flex-direction: column;
     align-items: center;
 }
@@ -104,7 +192,6 @@ section [class*="-card"] {
     line-height: 1.625rem; 
 }
 
-section .history-card { left: 110px; }
 
 .history-card { 
     display: flex; 
@@ -114,10 +201,11 @@ section .history-card { left: 110px; }
     padding-top: 2.5rem; 
     margin: 0 auto; 
     position: relative;
-    left: 70px; 
+    left: 115px; 
 }
 
 .history-card .history-title-img { 
+    width: 100%; 
     max-width: 250px; 
 }
 
@@ -147,7 +235,9 @@ section .history-card { left: 110px; }
 }
 
 .history-card ol > li:nth-child(2n) ul { 
-    transform: translateX(calc(-100% - 160px));
+    transform: translateX(-136%);
+    transform: translateX(-webkit-calc(-100% - 160px));
+    
 }
 
 .history-card ol > li:nth-child(2n) li {
@@ -165,7 +255,8 @@ section .history-card { left: 110px; }
     border-radius: 50%;
     font-size: 1.25rem; 
     color: #fff; 
-    z-index: 10; 
+    z-index: 100; 
+    position: relative;
 }
 
 .history-card ul { 
@@ -193,7 +284,7 @@ section .history-card { left: 110px; }
 
 .news-card { 
     padding: 1.875rem 3.75rem; 
-    box-shadow: 0px 10px 20px #00000029;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
     border-radius: .625rem; 
 }
 
@@ -212,6 +303,8 @@ section .history-card { left: 110px; }
     margin-left: auto; 
     color: #9E9E9E; 
 }
+
+.board-card table td.making-name { padding-left: 3.75rem; }
 
 .board-list li { 
     border-top: 1px solid #EDEDED; 
@@ -247,6 +340,7 @@ section .history-card { left: 110px; }
     margin-left: 3rem; 
 }
 
+.review-text.mobile-review-text { display: none; }
 
 .inquiry-card { 
     background-color: #fff; 
@@ -254,19 +348,21 @@ section .history-card { left: 110px; }
     align-items: center;
     justify-content: space-between;
     padding: 1.875rem 3.75rem;
-    box-shadow: 0px 10px 20px #00000029;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
 
+.inquiry-card h3 { text-align: left; }
+
 .inquiry-card .apply-btn { 
-    background-color: #325FAB; 
     width: 10.625rem; 
     padding: 1rem 1.875rem; 
     border-radius: 1.875rem;
     box-shadow: 0px 3px 6px #15469A80;
     font-size: 1.125rem; 
-    color: #fff; 
 }
+
+
 
 .inquiry-card .inquiry-list li + li { 
     margin-top: .5rem;
@@ -295,6 +391,7 @@ company-detail-list { margin-right: 1.875rem; }
 .greeting-ceo p { 
     margin-top: 1.5rem;
     line-height: 1.625rem; 
+    text-shadow: 0 2px 2px #fff;
 }
 
 .greeting-ceo .ceo-sign-img { 
@@ -312,45 +409,58 @@ company-detail-list { margin-right: 1.875rem; }
     display: inline-flex; 
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%; 
+    max-width: 1000px; 
     margin: 0 auto; 
 }
 
 .certification-list ul li { 
     display: inline-block; 
+    width: 100%; 
     max-width: 25%; 
     padding: 0 1.5rem 3.75rem; 
     text-align: center;
 }
 
 .certification-list .certi-img { 
-    background-color: #EBEBEB; 
-    width: 100%; 
-    min-width: 165px; 
+    display: inline-block;
+    max-width: 170px; 
     margin-bottom: .75rem; 
-    box-shadow: 0px 6px 12px #00000029;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+}
+
+.product-info .customer-list { 
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    box-shadow: none;
 }
 
 .customer-list {
-    box-shadow: 0px 6px 12px #00000029;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
 
 .customer-list ul { 
     display: flex; 
     flex-wrap: wrap;
-    margin-left: -1%; 
 }
 
 .customer-list ul li { 
-    min-width: 24%; 
+    width: 100%; 
+    max-width: 24%; 
     margin-left: 1%; 
     margin-bottom: 1.875rem; 
     text-align: center;
 }
 
+.contact .map { width: 100%; }
+
+.contact-list { margin-left: 3.75rem; }
+
+.contact div.flex-1 { min-height: 20rem; }
 .contact-list ul li + li { margin-top: 3.75rem; }
 .contact-list ul li h3 { margin-bottom: .375rem; }
-
 .contact-list ul li p { line-height: 1.625rem; }
 
 .contact-list ul li button { margin-top: 1.25rem; }
@@ -381,7 +491,7 @@ company-detail-list { margin-right: 1.875rem; }
 .card-group { 
     display: flex; 
     flex-wrap: wrap;
-    margin-left: -3rem; 
+    margin-left: -3%; 
 }
 
 .card-group .card { 
@@ -484,7 +594,7 @@ company-detail-list { margin-right: 1.875rem; }
     max-width: 1200px; 
     margin: auto; 
     border-radius: .625rem;
-    box-shadow: 0px 10px 20px #00000029;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
 }
 
 .surgery-intro .card-content.surgery .surgery-compare { 
@@ -535,7 +645,7 @@ company-detail-list { margin-right: 1.875rem; }
     display: block; 
     position: absolute; 
     top: 1rem; 
-    left: -2rem; 
+    left: -4rem; 
     background-color: #F4F7FB; 
     width: 100%; 
     height: 100%; 
@@ -583,8 +693,6 @@ company-detail-list { margin-right: 1.875rem; }
 
 .surgery-intro .card-content p + p { margin-top: 1.25rem; }
 
-.product-info > div { padding: 1.8751rem; }
-
 .product-info .card { 
     background-color: #fff; 
     width: 100%; 
@@ -592,7 +700,12 @@ company-detail-list { margin-right: 1.875rem; }
     margin: auto; 
     padding: 5rem 5rem 3.125rem; 
     border-radius: .625rem; 
-    box-shadow: 0px 10px 20px #00000029;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+
+.product-info > div + div { margin-top: 3.75rem; }
+.product-info > div.light-blue-bg { 
+    padding: 3.75rem 0; 
 }
 
 .product-info .card .card-header { 
@@ -676,10 +789,9 @@ company-detail-list { margin-right: 1.875rem; }
 
 .page.greeting .page-content.row { 
     width: 100%; 
-    max-width: 1040px; 
     margin: auto; 
     margin-top: -2.5rem; 
-    padding: 2.5rem; 
+    padding: 2.5rem 0; 
 }
 
 .page.greeting .page-content { 
@@ -700,8 +812,8 @@ company-detail-list { margin-right: 1.875rem; }
 
     html, body { font-size: 14px; }
 
-    .page { padding: 6.25rem 5rem 12rem }
-    .crumble { margin-left: -2.5rem; }
+    .page, .page.remove-padding,
+    .page.full-screen { padding: 6.25rem 2.5rem 12rem }
 
     .history-card { 
         max-width: 650px !important; 
@@ -739,6 +851,8 @@ company-detail-list { margin-right: 1.875rem; }
         margin: 1.875rem auto; 
     }
 
+    .surgery-intro .card { padding: 2.5rem 1.875rem }
+
     .gnb-menu-btn { display: block; }
 
     .gnb-close-btn { 
@@ -761,7 +875,7 @@ company-detail-list { margin-right: 1.875rem; }
         top: 0; 
         right: 0; 
         background-color: #fff; 
-        width: 20rem; 
+        width: 25rem; 
         height: 100vh; 
         padding-top: 2.5rem; 
         border-left: 1px solid #EDEDED; 
@@ -777,7 +891,7 @@ company-detail-list { margin-right: 1.875rem; }
         margin: 0; 
     }
 
-    .menu-box.active ul { display: inline-block; }
+    .menu-box.active ul { display: block; }
     .menu-box.active .menu-item { 
         border-bottom-color: #325FAB; 
         color: #325FAB;
@@ -786,8 +900,8 @@ company-detail-list { margin-right: 1.875rem; }
     .menu-box .menu-item { 
         display: inline-block;
         position: relative; 
-        height: 2.5rem; 
-        line-height: 2.5rem; 
+        height: 3.5rem; 
+        line-height: 3.5rem; 
         margin-left: 2.5rem; 
         padding: 0; 
     }
@@ -795,7 +909,7 @@ company-detail-list { margin-right: 1.875rem; }
     .menu-box:not(.no-list)::before { 
         content: ''; 
         right: 18px; 
-        top: calc(1.25rem + 3px); 
+        top: calc(1.875rem + 3px); 
         transform: translateY(-50%); 
         border-width: 6px; 
         border-radius: 3px; 
@@ -808,7 +922,7 @@ company-detail-list { margin-right: 1.875rem; }
     .menu-box:not(.no-list).active::before { 
         border-color: transparent;
         border-bottom-color: #325FAB;
-        top: calc(1.25rem - 3px); 
+        top: calc(1.875rem - 3px); 
     }
 
     .menu-box ul { 
@@ -839,7 +953,7 @@ company-detail-list { margin-right: 1.875rem; }
         align-items: center;
         justify-content: center;
         padding: 0; 
-        margin-left: 0; 
+        margin-left: auto; 
     }
 
     
@@ -874,31 +988,61 @@ company-detail-list { margin-right: 1.875rem; }
         margin-top: 1.875rem;
     }
 
-    .tab-content .row { flex-direction: column; }
+    .tab-content .row { 
+        max-width: 100%; 
+        flex-direction: column; 
+    }
 
-    .tab-btn + .tab-btn, 
-    .tab-content .review-text + .review-text { margin-left: 0; }
+    .tab-btn { max-width: 100%; }
+    .tab-btn + .tab-btn { margin-left: 0; }
+    .tab-content .review-text + .review-text { margin-left: auto; }
 
     .tab-btn-group { padding: 0 1.875rem; }
-    .tab-content { padding: 0 1.875rem 12rem; }
-    .tab-content .review-text:nth-child(2) { margin-top: 2.5rem; }
-    .tab-content.review::before { left: 0; }
+    .tab-content { padding: 0 0 12rem; }
 
-    .customer-list ul { 
-        margin-left: -2%; 
-    }
+    .tab-content.recommend::before,
+    .tab-content.recommend::after,
+    .tab-content.review::before { display: none; }
+
+    .tab-content .surgery-method { padding: 0 1.875rem; }
     
     .customer-list ul li { 
-        min-width: 48%; 
+        max-width: 48%; 
         margin-left: 2%;         
     }
 
-    .surgery-intro .card-content.surgery .surgery-compare span { 
-        margin: 1rem 0; 
+    .surgery-intro .card-content.surgery .surgery-compare span { margin: 1rem 0; }
+    .page-content.contact .content.row { flex-direction: column; }
+    .contact-list { margin-left: 0; }
+    .surgery-intro { box-shadow: none; }
+
+    .tab-content.review { background-image: none; padding: 0 0 12rem; }
+    .tab-content .pc-review-text { display: none; }
+    .tab-content .review-text.mobile-review-text { display: block; }
+    .tab-content .review-text.mobile-review-text > div { padding: 0 1.875rem; }
+    .tab-content .review-text.mobile-review-text .card { max-width: 100%; }
+
+    .tab-content .review-text.mobile-review-text .kim-pro,
+    .tab-content .review-text.mobile-review-text .lee-pro { 
+        background: url('../img/bg-review.jpg') no-repeat center center; 
+        margin-top: 2.5rem; 
+        padding: 2.5rem 1.875rem; 
     }
+
+    .tab-content .review-text.mobile-review-text .kim-pro .card, 
+    .tab-content .review-text.mobile-review-text .lee-pro .card { margin-top: 0; }
+
+
 }
 
 @media (max-width: 700px) { 
+
+    .mobile-td { position: relative; }
+    .mobile-td .right { 
+        position: absolute; 
+        right: 0; 
+        top: .25rem; 
+    }
 
     .page { padding: 2.5rem; }
 
@@ -960,6 +1104,7 @@ company-detail-list { margin-right: 1.875rem; }
         padding: .875rem 1.25rem !important; 
     }
 
+    
 
     .board-card:not(.board-content) table thead, 
     .board-card:not(.board-content) table tbody tr td:first-child, 
@@ -994,7 +1139,7 @@ company-detail-list { margin-right: 1.875rem; }
 
     footer .company-detail-list li { text-align: center; }
 
-    .page-content.contact .content.row { flex-direction: column; }
+    
 
     .card-group { margin-left: 0; }
     .card-group .card { 
@@ -1068,5 +1213,17 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
     form .no-label-item { padding-left: 0; }
+
+    .customer-list ul li { 
+        max-width: 100%; 
+        margin-left: 0;         
+        margin-bottom: 2.5rem; 
+    }
+
+    .tab-content .review-text.mobile-review-text .kim-pro, 
+    .tab-content .review-text.mobile-review-text .lee-pro { 
+        background-image: none;
+        background-color: #F4F7FB; 
+    }
 
 }

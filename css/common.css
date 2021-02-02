@@ -1,10 +1,14 @@
-
+.w-full { width: 100%; }
+.h-full { height: 100%; }
 
 .hidden { display: none !important; }
 
 /* flex 값 */
 
-.row { display: flex; }
+.row { 
+    display: flex; 
+    display: -ms-flexbox; 
+}
 .col { display: flex; flex-direction: column; }
 
 .row.top { align-items: flex-start; }
@@ -23,11 +27,11 @@
 .col.center { align-items: center; }
 .col.right { align-items: flex-end; }
 
-.flex-1 { flex: 1 0 0; }
-.flex-2 { flex: 2 0 0; }
-.flex-3 { flex: 3 0 0; }
-.flex-4 { flex: 4 0 0; }
-.flex-5 { flex: 5 0 0; }
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+.flex-4 { flex: 4; }
+.flex-5 { flex: 5; }
 
 /* color */
 

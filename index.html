@@ -12,78 +12,78 @@
         <div class="gnb-topbar">
             <ul class="gnb-top-menu">
                 <li>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" aria-haspopup="true"><img alt="대한민국 국기" src="./img/kor_flag.png"/> KOR</button>
-                        <ul class="dropdown-menu">
-                            <li role="option" tabindex="0"><span><img alt="대한민국 국기" src="./img/kor_flag.png"/> KOR</span></li>
-                            <li role="option" tabindex="0"><span><img alt="베트남 국기" src="./img/vnm_flag.png"/> VNM</span></li>
-                            <li role="option" tabindex="0"><span><img alt="미국 국기" src="./img/eng_flag.svg"/> ENG</span></li>
-                        </ul>
-                    </div>
+                    <select id="language">
+                        <option value="korea"  data-imagesrc="../img/kor_flag.png">KOR</option>
+                        <option value="vietnam"  data-imagesrc="../img/vnm_flag.png">VNM</option>
+                        <option value="english" data-imagesrc="../img/eng_flag.svg">ENG</option>
+                    </select>
                 </li>
 
                 <!-- 
                     한국/베트남에 따라 아래 마이페이지의 hidden class를 제거해주세요. 
                  -->
                 
-                <li><a href="/pageHtml/login.html" >로그인</a></li>
-                <li><a href="/pageHtml/logup.html">회원가입</a></li>
+                <li><a href="pageHtml/login.html" >로그인</a></li>
+                <li><a href="pageHtml/logup.html">회원가입</a></li>
 
-                <li class="hidden"><a href="/pageHtml/mypageKor.html">마이페이지</a></li>
-                <li class="hidden"><a href="/pageHtml/mypageVnm.html">마이페이지</a></li>
+                <li class="hidden"><a href="pageHtml/mypageKor.html">마이페이지</a></li>
+                <li class="hidden"><a href="pageHtml/mypageVnm.html">마이페이지</a></li>
             </ul>
         </div>
 
         <div class="gnb-menubar">
-            <a href="index.html">
-                <img src="./img/logo.png" alt="오큐라이트 홈페이지 이동" />
-            </a>
+            <div class="gnb-bottom-menu">
 
-            <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="./img/bar-icon.png" alt="메뉴아이콘" /></button>
-            <ul id="gnbMenu" class="gnb-menu">
-                <li class="gnb-close-btn">
+                <a href="index.html">
                     <img src="./img/logo.png" alt="오큐라이트 홈페이지 이동" />
-                    <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="./img/close.png" alt="닫기버튼"/></button>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">기업 소개</span>
-                    <ul>
-                        <li><a href="pageHtml/greeting.html">CEO 인사말</a></li>
-                        <li><a href="pageHtml/history.html">연혁</a></li>
-                        <li><a href="pageHtml/certification.html">인증 내역</a></li>
-                        <li><a href="pageHtml/customerInfo.html">고객 병원 및 거래업체</a></li>
-                        <li><a href="pageHtml/newsDataBoard.html">보도자료</a></li>
-                        <li><a href="pageHtml/contact.html">Contact</a></li>
-                    </ul>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">제품 및 수술법</span>
-                    <ul>
-                        <li><a href="pageHtml/productInfo.html">제품 소개</a></li>
-                        <li><a href="pageHtml/surgeryInfo.html">수술법 소개</a></li>
-                        <li><a href="pageHtml/reviewRecommend.html">수술 후기 및 추천</a></li>
-                    </ul>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">교육과정</span>
-                    <ul>
-                        <li><a href="pageHtml/onlineStudy.html">온라인 교육</a></li>
-                        <li><a href="pageHtml/offlineStudy.html">오프라인 교육</a></li>
-                        <li><a href="pageHtml/studyDataBoard.html">학습 자료실</a></li>
-                    </ul>
-                </li>
-                <li class="menu-box no-list">
-                    <a href="pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
-                </li>
-                <li class="menu-box">
-                    <span class="menu-item">고객센터</span>
-                    <ul>
-                        <li><a href="pageHtml/noticeBoard.html">공지사항</a></li>
-                        <li><a href="pageHtml/questionAnwserBoard.html">Q&A</a></li>
-                        <li><a href="pageHtml/freeBoard.html">자유게시판</a></li>
-                    </ul>
-                </li>
-            </ul>
+                </a>
+    
+                <button onclick="modalOpen(gnbMenu, event)" class="btn gnb-menu-btn"><img src="./img/bar-icon.png" alt="메뉴아이콘" /></button>
+                <ul id="gnbMenu" class="gnb-menu">
+                    <li class="gnb-close-btn">
+                        <img src="./img/logo.png" alt="오큐라이트 홈페이지 이동" />
+                        <button onclick="modalClose(gnbMenu)" class="btn btn-close"><img src="./img/close.png" alt="닫기버튼"/></button>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="pageHtml/greeting.html">기업 소개</a></span>
+                        <ul>
+                            <li><a href="pageHtml/greeting.html">CEO 인사말</a></li>
+                            <li><a href="pageHtml/history.html">연혁</a></li>
+                            <li><a href="pageHtml/certification.html">인증 내역</a></li>
+                            <li><a href="pageHtml/customerInfo.html">고객 병원 및 거래업체</a></li>
+                            <li><a href="pageHtml/newsDataBoard.html">보도자료</a></li>
+                            <li><a href="pageHtml/contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="pageHtml/productInfo.html">제품 및 수술법</a></span>
+                        <ul>
+                            <li><a href="pageHtml/productInfo.html">제품 소개</a></li>
+                            <li><a href="pageHtml/surgeryInfo.html">수술법 소개</a></li>
+                            <li><a href="pageHtml/reviewRecommend.html">수술 후기 및 추천</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="pageHtml/onlineStudy.html">교육과정</a></span>
+                        <ul>
+                            <li><a href="pageHtml/onlineStudy.html">온라인 교육</a></li>
+                            <li><a href="pageHtml/offlineStudy.html">오프라인 교육</a></li>
+                            <li><a href="pageHtml/studyDataBoard.html">학습 자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-box no-list">
+                        <a href="pageHtml/mystudyRoomBoard.html" class="menu-item">나의 강의실</a>
+                    </li>
+                    <li class="menu-box">
+                        <span class="menu-item"><a href="pageHtml/noticeBoard.html">고객센터</a></span>
+                        <ul>
+                            <li><a href="pageHtml/noticeBoard.html">공지사항</a></li>
+                            <li><a href="pageHtml/questionAnwserBoard.html">Q&A</a></li>
+                            <li><a href="pageHtml/freeBoard.html">자유게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     
@@ -191,21 +191,21 @@
         <section class="p-60">
             <h3 class="section-title">Product</h3>
             <div class="ocu-product-card">
-                <div class="card-item">
+                <a class="card-item" href="./pageHtml/productInfo.html" target="_self">
                     <img src="./img/iChopper.png" alt="아이챠퍼로써 백내장 수술용 안내조명챠퍼" />
                     <h3>아이챠퍼 (iChopper)</h3>
                     <p>백내장 수술용 안내조명챠퍼</p>
-                </div>
-                <div class="card-item">
+                </a>
+                <a href="./pageHtml/productInfo.html" target="_self" class="card-item">
                     <img src="./img/iProbe.png" alt="아이챠퍼로써 백내장 수술용 안내조명챠퍼" />
                     <h3>아이프로브 (iProbe)</h3>
                     <p>망막 수술용 일루미네이션 프로브</p>
-                </div>
-                <div class="card-item">
+                </a>
+                <a href="./pageHtml/productInfo.html" target="_self" class="card-item">
                     <img src="./img/iVision.png" alt="아이챠퍼로써 백내장 수술용 안내조명챠퍼" />
                     <h3>아이비전 (iVision)</h3>
                     <p>오큐라이트 전용 광원장치</p>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -310,7 +310,7 @@
                     </ul>
                 </div>
                 <div>
-                    <button onclick="modalOpen(wetlabApplyModal, event)" class="apply-btn">Wet-Lab 신청</button>
+                    <button onclick="modalOpen(wetlabApplyModal, event)" class="apply-btn primary-bg">Wet-Lab 신청</button>
                 </div>
             </div>
         </section>
@@ -413,6 +413,9 @@
         </div>
     </div>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+    <script src="./js/forEachpolyfill.js"></script>
     <script src="./js/component.js"></script>    
 </body>
 </html>

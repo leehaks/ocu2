@@ -14,8 +14,16 @@
                 <button onclick="modalClose(addressModal)" class="btn btn-close"><img src="../img/close.png" alt="닫기버튼"/></button>
             </div>
             <div class="modal-body">
-                <div class="search block">
-                    <input type="text" placeholder="마음속내과" />
+
+                <div class="board-filter row">
+                    <select id="mapBoard" class="basic">
+                        <option>제목</option>
+                        <option>선택</option>
+                        <option>선택</option>
+                    </select>
+                    <div class="search block">
+                        <input type="text" placeholder="마음속내과" />
+                    </div>
                 </div>
 
                 <div class="address-filter mt-20">
@@ -39,6 +47,8 @@
         </div>
     </div>
     
-    <script src="../js/component.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+    <script src="../js/component.js"></script>     
 </body>
 </html>
