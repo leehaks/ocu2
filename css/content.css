@@ -8,6 +8,8 @@ header {
     background-color: #fff; 
 }
 
+body { min-width: 100%; }
+
 body.scroll-hidden { overflow: hidden; }
 
 #wrap { 
@@ -44,6 +46,7 @@ section .section-title {
 section { overflow: hidden; }
 
 section [class*="-card"] { 
+    width: 100%; 
     max-width: 1200px; 
     margin: 0 auto; 
 }
