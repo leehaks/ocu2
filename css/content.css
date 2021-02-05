@@ -1010,15 +1010,13 @@ company-detail-list { margin-right: 1.875rem; }
 
     .gnb-close-btn { 
         display: block; 
-    }
-
-    .gnb-close-btn > img { 
-        margin: 1rem 2.5rem; 
+        margin: 0 2.5rem; 
+        padding-top: 14px; 
     }
 
     .gnb-close-btn .btn-close { 
-        right: .5rem; 
-        top: 3.5rem; 
+        right: 20px; 
+        top: 55px; 
         width: 3.5rem; 
     }
 
@@ -1030,7 +1028,7 @@ company-detail-list { margin-right: 1.875rem; }
         background-color: #fff; 
         width: 25rem; 
         height: 100vh; 
-        padding-top: 2.5rem; 
+        padding-top: 40px; 
         border-left: 1px solid #EDEDED; 
         z-index: 900;
     }
@@ -1063,7 +1061,7 @@ company-detail-list { margin-right: 1.875rem; }
 
     .menu-box:not(.no-list)::before { 
         content: ''; 
-        right: 18px; 
+        right: 40px; 
         top: calc(1.875rem + 3px); 
         -webkit-transform: translateY(-50%); 
                 transform: translateY(-50%); 
@@ -1242,11 +1240,22 @@ company-detail-list { margin-right: 1.875rem; }
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        padding: 3.5rem 1.875rem 2.5rem; 
+        padding: 3.5rem 3.5rem 2.5rem; 
     }
+
+    
 }
 
 @media (max-width: 700px) { 
+
+    .table-btn-group button.btn.sm { 
+        padding: .375rem; 
+    }
+
+    .gnb-close-btn .btn-close { 
+        right: -12px; 
+        top: 16px; 
+    }
 
     .card-group .card:last-child { margin-bottom: 0; }
 
@@ -1286,8 +1295,15 @@ company-detail-list { margin-right: 1.875rem; }
 
     .page { padding: 2.5rem; }
 
-    .gnb-menu { width: 100%; }
+    .gnb-menu { 
+        width: 100%; 
+        
+    }
 
+    .gnb-menu .gnb-close-btn { 
+        height: 70px; 
+        position: relative;
+    }
     .ocu-info-card,
     .ocu-info-card p { 
         display: block; 
