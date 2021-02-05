@@ -1390,9 +1390,7 @@ company-detail-list { margin-right: 1.875rem; }
 
     footer .company-detail-list li { text-align: center; }
 
-    .modal { 
-        padding: 4.375rem 1.75rem 2.5rem; 
-    } 
+    
 
     .card-group { margin-left: 0; }
     .card-group .card { 
@@ -1446,7 +1444,8 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
     .modal { 
-        height: 100%; 
+        padding: 4.375rem 1.75rem 2.5rem; 
+        height: 100vh; 
         max-width: 100%; 
         border-radius: 0;
         display: -ms-flexbox;
