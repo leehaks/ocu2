@@ -418,10 +418,10 @@ a.primary-bg:hover,
 .table th .table-th, 
 .table td a { 
     display: block; 
-    /* width: 90%; 
+    width: 90%; 
     text-overflow: ellipsis;
     overflow: hidden; 
-    white-space: nowrap; */
+    white-space: nowrap;
 }
 
 .table .sub-box { 

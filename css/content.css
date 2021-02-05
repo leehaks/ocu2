@@ -1550,5 +1550,13 @@ company-detail-list { margin-right: 1.875rem; }
     .product-info .card .card-header h3 { text-align: center;}
 
     .modal-footer { padding-bottom: 4rem; }
+
+    .table td a { 
+        display: block; 
+        width: 100%; 
+        text-overflow: ellipsis;
+        overflow: auto; 
+        white-space: wrap;
+    }
 }
 
