@@ -8,7 +8,11 @@ header {
     background-color: #fff; 
 }
 
-body.scroll-hidden { overflow: hidden; }
+body.scroll-hidden { 
+    overflow: hidden; 
+}
+
+body.scroll-hidden footer { opacity: hidden; }
 
 #wrap { 
     padding-top: 7.5rem; 
@@ -996,7 +1000,7 @@ company-detail-list { margin-right: 1.875rem; }
 
     .notice-card { display: block; }
 
-    .notice-card .img-box { margin: auto; width: 80%; }
+    /* .notice-card .img-box { margin: auto; width: 80%; } */
 
     .surgery-intro .card, 
     .product-info .card { padding: 3.75rem 1.875rem 3.125rem}
@@ -1478,6 +1482,8 @@ company-detail-list { margin-right: 1.875rem; }
         padding-bottom: 3rem; 
         overflow: auto; 
     }
+
+    .history-card.mobile-card ul { padding-left: 1.25rem; }
 
     .card-group .card .card-img { 
         max-height: 260px; 
