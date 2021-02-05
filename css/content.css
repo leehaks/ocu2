@@ -1438,13 +1438,19 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
 
+    .content.product-info .card-header div { 
+        flex: 1 0 auto; 
+    }
     .content.product-info .card-header { 
         -webkit-box-orient: vertical; 
         -webkit-box-direction: reverse; 
             -ms-flex-direction: column-reverse; 
                 flex-direction: column-reverse;
-        display: block; 
+        display: -ms-flexbox;
+        display: -webkit-flex; 
     }
+
+
 
     .product-info .card .card-content { -webkit-box-orient: vertical; 
         -ms-flex-direction: column; 
