@@ -386,7 +386,6 @@ label.dd-option-text { line-height: inherit !important; }
 .board-list li .register-date { 
     margin-left: auto;
     font-size: .875rem; 
-    display: none; 
 }
 
 .notice-card { 
@@ -971,6 +970,8 @@ company-detail-list { margin-right: 1.875rem; }
 
 @media (max-width: 1200px) { 
 
+    .notice-card .board { margin-left: 0; margin-top: 2.5rem; }
+
     .contact .map { margin-bottom: 2.5rem; }
 
     .ocu-info-card img { max-width: 250px; }
@@ -997,11 +998,6 @@ company-detail-list { margin-right: 1.875rem; }
     .notice-card { display: block; }
 
     .notice-card .img-box { margin: auto; width: 80%; }
-
-    .notice-card .board { 
-        width: 80%; 
-        margin: 1.875rem auto; 
-    }
 
     .surgery-intro .card, 
     .product-info .card { padding: 3.75rem 1.875rem 3.125rem}
@@ -1244,9 +1240,15 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
     
+    .card-group .card h4 { font-size: 1.25rem; }
+    .card-group .card p { font-size: 1rem }
+
+    
 }
 
 @media (max-width: 700px) { 
+
+    .board-list li .register-date { display: none; }
 
     .table-btn-group button.btn.sm { 
         padding: .375rem; 
@@ -1465,9 +1467,6 @@ company-detail-list { margin-right: 1.875rem; }
     .card-group .card .card-img { 
         max-height: 260px; 
     }
-
-    .card-group .card h4 { font-size: 1.25rem; }
-    .card-group .card p { font-size: 1rem }
 
     .modal .modal-body { 
         width: 100%; 
