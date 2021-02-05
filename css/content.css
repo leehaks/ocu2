@@ -1462,6 +1462,10 @@ company-detail-list { margin-right: 1.875rem; }
                 justify-content: center;
     }
 
+    .card-group .card .card-img { 
+        max-height: 260px; 
+    }
+
     .modal .modal-body { 
         width: 100%; 
         height: 100%; 
