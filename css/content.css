@@ -1462,6 +1462,7 @@ company-detail-list { margin-right: 1.875rem; }
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
+        padding-bottom: 3rem; 
     }
 
     .card-group .card .card-img { 
