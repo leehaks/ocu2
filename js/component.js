@@ -83,6 +83,7 @@ slider();
 
 function modalOpen(elem, event) {
     event.preventDefault();
+    console.log(elem)
     elem.classList.add('active');
     document.querySelector('body').classList.add('scroll-hidden');
 }
