@@ -1298,8 +1298,8 @@ company-detail-list { margin-right: 1.875rem; }
     .page { padding: 2.5rem; }
 
     .gnb-menu { 
-        width: 100%; 
-        
+        width: 100%;     
+        min-width: 100%;     
     }
 
     .gnb-menu .gnb-close-btn { 
