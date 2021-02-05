@@ -1527,8 +1527,12 @@ company-detail-list { margin-right: 1.875rem; }
         margin-bottom: 2.5rem; 
     }
 
+    .fake-scroll { 
+        position: relative; 
+        z-index: 0; }
+
     .product-info .card .card-header h3 { text-align: center;}
 
-    
+
 }
 
