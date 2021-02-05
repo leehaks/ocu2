@@ -137,6 +137,24 @@ function tabController() {
 
 tabController();
 
+function hover() {
+    var hover = document.querySelector('.download-btn');
+
+    if (!hover) {
+        return;
+    }
+
+    hover.addEventListener('mouseover', function () {
+        hover.querySelector('img').setAttribute('src', '../img/icon-down-wh.png');
+    });
+
+    hover.addEventListener('mouseout', function () {
+        hover.querySelector('img').setAttribute('src', '../img/icon-down-lg.png');
+    });
+}
+
+hover();
+
 function menuActive() {
     var menu = document.querySelector(".gnb-menu");
 
@@ -190,5 +208,5 @@ $("#noticeBoard").ddslick({
 });
 
 $("#mapBoard").ddslick({
-    width: "105px"
+    width: "145px"
 });

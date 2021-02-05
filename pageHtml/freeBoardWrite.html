@@ -87,7 +87,7 @@
     </header>
     
     <div id="wrap">
-        <div class="page remove-padding">
+        <div class="page">
             <div class="page-title">
                 <h2 class="primary-text">자유게시판</h2>
 
@@ -101,49 +101,84 @@
             <div class="page-content">                
                 <div class="content">
                     <div class="board-card table">
-                        <table>                            
-                            <tbody>
-                                <tr>
-                                    <td class="text-center">이름</td>
-                                    <td class="text-center making-name">홍길동</td>
-                                </tr>
-                                <tr class="insert-td">
-                                    <td class="text-center">제목</td>
-                                    <td class="text-center"><input type="text" placeholder="텍스트영역" /></td>
-                                </tr>
-                                <tr class="insert-td">
-                                    <td class="text-center">내용</td>
-                                    <td class="textarea-td text-center">
-                                        <textarea>텍스트영역</textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <div class="row">
-                                            <div class="rdo-group row middle">
-                                                <div class="rdo">
-                                                    <input id="publicRdo" type="radio" name="disclosureStatus" checked />
-                                                    <label for="publicRdo">공개</label>
+                        <div class="web-write-box">
+                            <table>                            
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">이름</td>
+                                        <td class="text-center making-name">홍길동</td>
+                                    </tr>
+                                    <tr class="insert-td">
+                                        <td class="text-center">제목</td>
+                                        <td class="text-center">
+                                            <p class="table-input-title">제목</p><input type="text" /></td>
+                                    </tr>
+                                    <tr class="insert-td">
+                                        <td class="text-center">내용</td>
+                                        <td class="textarea-td text-center">
+                                            <p class="table-input-title">내용</p>
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="rdo-group row middle">
+                                                    <div class="rdo">
+                                                        <input id="publicRdo" type="radio" name="disclosureStatus" checked />
+                                                        <label for="publicRdo">공개</label>
+                                                    </div>
+                                                    <div class="rdo">
+                                                        <input id="privateRdo" type="radio" name="disclosureStatus" />
+                                                        <label for="privateRdo" >비공개</label>
+                                                    </div>
                                                 </div>
-                                                <div class="rdo">
-                                                    <input id="privateRdo" type="radio" name="disclosureStatus" />
-                                                    <label for="privateRdo" >비공개</label>
+                                                <div class="password ml-30">
+                                                    <input type="password" placeholder="비밀번호"/>
                                                 </div>
                                             </div>
-                                            <div class="password ml-30">
-                                                <input type="password" placeholder="비밀번호"/>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="mt-20 text-right">
-                            <a href="./freeBoard.html" class="btn border">등록</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="mt-20 text-right">
+                                <a href="./freeBoard.html" class="btn border  primary-border">등록</a>
+                            </div>
                         </div>
                         
+                        <form class="mobile-write-box">
+                            <div class="text-input item mt-30">
+                                <label>이름</label>
+                                <input type="text" value="홍길동" readonly />
+                            </div>
+                            <div class="text-input item mt-30">
+                                <label>제목</label>
+                                <input type="text" />
+                            </div>
+                            <div class="text-input item mt-30">
+                                <label>내용</label>
+                                <textarea></textarea>
+                            </div>
+                            <div class="row mt-20">
+                                <div class="rdo-group row middle">
+                                    <div class="rdo">
+                                        <input id="publicRdo1" type="radio" name="disclosureStatus1" checked />
+                                        <label for="publicRdo1">공개</label>
+                                    </div>
+                                    <div class="rdo">
+                                        <input id="privateRdo1" type="radio" name="disclosureStatus1" />
+                                        <label for="privateRdo1" >비공개</label>
+                                    </div>
+                                </div>
+                                <div class="password ml-30">
+                                    <input type="password" placeholder="비밀번호"/>
+                                </div>
+                            </div>
+                            <div class="mt-20 text-right">
+                                <a href="./freeBoard.html" class="btn border primary-border">등록</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -170,6 +205,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
-    <script src="../js/component.js"></script>     
+    <script src="../js/forEachpolyfill.js"></script>
+    <script src="../js/component.js"></script>         
 </body>
 </html>

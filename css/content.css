@@ -16,14 +16,20 @@ body.scroll-hidden { overflow: hidden; }
 }
 
 footer { 
-    display: flex; 
-    align-items: flex-start;
-    justify-content: space-between;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;   
+     -webkit-box-align: start;   
+         -ms-flex-align: start;   
+             align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: #052B4A; 
     padding: 3.5rem 7.5rem 2.5rem; 
 }
 
-footer .btn-group .btn { flex-shrink: 0; }  
+footer .btn-group .btn { -ms-flex-negative: 0; flex-shrink: 0; }  
 footer .btn-group .btn:hover { color: #fff; }
  
 
@@ -42,23 +48,31 @@ section [class*="-card"] {
     margin: 0 auto; 
 }
 
-#noticeBoard a.dd-selected, 
-#studyBoard a.dd-selected { 
-    height: 2.5rem; 
+
+
+.board-filter a.dd-selected { 
+    padding: .625rem 1.25rem; 
     border: 1px solid #E0E0E0; 
     border-radius: .25rem;
 }
 
-#noticeBoard a.dd-option, 
-#studyBoard a.dd-option { 
+.board-filter .dd-pointer { right: 20px; }
+.board-filter a.dd-selected .dd-selected-text { margin-right: .625rem; }
+
+.board-filter a.dd-option { 
     background-color: #fff; 
+    padding: .625rem 1.25rem; 
+    color: #2E2E2E; 
+}
+.board-filter a.dd-option:hover { 
+    background-color: #f9f9f9; 
     color: #2E2E2E; 
 }
 
-#noticeBoard ul.dd-options, 
-#studyBoard ul.dd-options { 
+.board-filter ul.dd-options { 
     border: 1px solid #E0E0E0; 
-    margin-top: -2px; 
+    border-top: 0; 
+    margin-top: -4px; 
     border-bottom-left-radius: .25rem;
     border-bottom-right-radius: .25rem;
 }
@@ -71,9 +85,12 @@ div.dd-select {
 }
 
 a.dd-selected { 
-    display: flex; 
-    align-items: center;
-    height: 40px; 
+    min-width: auto; 
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: center;    -ms-flex-align: center;    align-items: center;
+    height: 2.5rem; 
+    font-size: .875rem; 
     font-weight: 400;
 }
 
@@ -83,27 +100,24 @@ label.dd-selected-text { line-height: .875rem !important; }
 span.dd-pointer-down { border-top-color: #B8C9D6; }
 span.dd-pointer-up { border-bottom-color: #B8C9D6 !important; }
 
-ul.dd-options { box-shadow: none; border: none; }
+ul.dd-options { -webkit-box-shadow: none; box-shadow: none; border: none; }
 
 a.dd-option { 
     background-color: #052B4A; 
     height: 40px; 
     line-height: 40px; 
     border-bottom: 0; 
-    display: flex; 
-    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: center;    -ms-flex-align: center;    align-items: center;
     padding: .625rem; 
+    font-size: .875rem; 
     font-weight: 400;
 }
 
 a.dd-option:hover { 
     background-color: #011D33; 
     color: #B8C9D6; 
-}
-
-.download-icon { 
-    width: 10px; 
-    margin-right: 4px; 
 }
 
 label.dd-option-text { line-height: inherit !important; }
@@ -128,6 +142,8 @@ label.dd-option-text { line-height: inherit !important; }
     padding: 6.25rem 0 12rem;
 }
 
+.page.remove-padding.full-screen { padding-bottom: 0; }
+
 .page.full-screen .page-content { 
     width: 100%; 
     max-width: 100%; 
@@ -145,12 +161,16 @@ label.dd-option-text { line-height: inherit !important; }
 
 .ocu-info-card { 
     background-color: #fff; 
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: center;    -ms-flex-align: center;    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 7.5rem auto; 
     padding: 1.875rem 3.75rem;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
 
@@ -160,24 +180,31 @@ label.dd-option-text { line-height: inherit !important; }
 }
 
 .ocu-info-card p { 
-    display: -ms-flexbox;
-    justify-content: flex-end;    
+    display: flex; 
+    justify-content: flex-end;
     line-height: 1.625rem; 
     color: #444; 
 }
 
 .ocu-product-card { 
-    display: flex; 
-    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: center;    -ms-flex-align: center;    align-items: center;
 }
 
 .ocu-product-card .card-item { 
-    flex: 1; 
+    -webkit-box-flex: 1; 
+        -ms-flex: 1; 
+            flex: 1; 
     display: block; 
     text-align: center;
     display: -webkit-flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
+        flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .ocu-product-card h3 { 
@@ -193,79 +220,30 @@ label.dd-option-text { line-height: inherit !important; }
 }
 
 
+.board-content-attach-file .icon-download { 
+    width: .625rem; 
+    margin-right: .5rem; 
+}
+
 .history-card { 
-    display: flex; 
-    justify-content: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    
+    -webkit-box-pack: center;    
+        -ms-flex-pack: center;    
+            justify-content: center;
     width: 100%; 
     max-width: 1200px; 
     padding-top: 2.5rem; 
     margin: 0 auto; 
     position: relative;
-    left: 115px; 
 }
 
-.history-card .history-title-img { 
-    width: 100%; 
-    max-width: 250px; 
-}
+.history-card table { max-width: 1100px; margin: auto; }
 
-.history-card ol {
-    position: relative;
-    height: 100%; 
-}
-
-.history-card ol::before { 
-    content: '';
-    position: absolute;
-    top: -1.25rem; 
-    left: 4.45rem; 
-    display: block;
-    background-color: #ebebeb;
-    width: 4px;
-    height: 100%;
-}
-
-.history-card ol > li { 
-    display: flex; 
-    align-items: flex-start;
-}
-
-.history-card ol > li + li { 
-    margin-top: 3.125rem; 
-}
-
-.history-card ol > li:nth-child(2n) ul { 
-    transform: translateX(-136%);
-    transform: translateX(-webkit-calc(-100% - 160px));
-    
-}
-
-.history-card ol > li:nth-child(2n) li {
-    justify-content: flex-end;    
-}
-
-.history-card ol > li .date-circle {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #325FAB; 
-    min-width: 4rem;
-    height: 4rem;
-    margin: 0 2.5rem; 
-    border-radius: 50%;
-    font-size: 1.25rem; 
-    color: #fff; 
-    z-index: 100; 
-    position: relative;
-}
-
-.history-card ul { 
-    display: inline-block; 
-}
+.history-card .text-right li { text-align: right; }
 
 .history-card ul li { 
-    display: flex; 
-    align-items: baseline;
     line-height: 2.375rem; 
     font-size: 1.125rem; 
 }
@@ -280,26 +258,105 @@ label.dd-option-text { line-height: inherit !important; }
     min-height: 4px; 
     border-radius: 50%;
     margin-right: .5rem; 
+} 
+
+.history-card td { vertical-align: top; }
+
+.history-card td.date { 
+    width: 64px; 
+    position: relative;
 }
+
+.history-card td.date div::before { 
+    content: ''; 
+    position: absolute;
+    margin: auto; 
+    left: 0; 
+    right: 0; 
+    display: block;
+    background-color: #ebebeb;
+    width: 4px;
+    height: 100%;
+}
+
+.history-card td .img-box img { max-width: 250px; }
+
+.history-card .date-circle {
+    display: inline-block; 
+    background-color: #325FAB; 
+    min-width: 4rem;
+    height: 4rem;
+    line-height: 4rem; 
+    text-align: center;
+    margin: 0 2.5rem; 
+    border-radius: 50%;
+    font-size: 1.25rem; 
+    color: #fff; 
+    z-index: 100; 
+    position: relative;
+}
+
+.history-card .date { overflow: hidden; }
+
+.history-card .date::after { 
+    content: ''; 
+    position: absolute;
+    margin: auto; 
+    left: 0; 
+    right: 0; 
+    display: block;
+    background-color: #ebebeb;
+    width: 4px;
+    height: 460px;
+}
+
+.history-card.mobile-card .text.img-box, 
+.history-card.mobile-card ul { margin-bottom: 2.5rem; }
+
+.mobile-card .text-center.vs { 
+    margin: .625rem 0; 
+    font-size: 1.25rem; 
+    color: #9E9E9E; 
+}
+
+.history-card.pc-card { padding-left: 6rem; }
 
 .news-card { 
     padding: 1.875rem 3.75rem; 
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 10px 20px rgba(0,0,0,0.2); 
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
     border-radius: .625rem; 
 }
 
 .board-header { 
-    display: flex; 
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    
+    -webkit-box-align: center;    
+    -ms-flex-align: center;    
     align-items: center;
     margin-bottom: .625rem; 
+    position: relative; 
 }
 
+.section-header { 
+    position: relative; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.section-header h3, 
 .board-header h3 { 
     font-size: 1.25rem; 
     color: #325FAB; 
 }
 
+.section-header .more-view-btn, 
 .board-header .more-view-btn { 
+    position: absolute; 
+    right: 0; 
+    bottom: .25rem; 
     margin-left: auto; 
     color: #9E9E9E; 
 }
@@ -309,27 +366,43 @@ label.dd-option-text { line-height: inherit !important; }
 .board-list li { 
     border-top: 1px solid #EDEDED; 
     padding: .875rem 0; 
-    display: flex; 
-    align-items: center;
+    display: block;
+    display: -webkit-flex; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify; 
+    justify-content: space-between;
+
+
 }
 
 .board-list li a { 
+    display: block; 
     font-size: .875rem; 
 }
 
 .board-list li .register-date { 
     margin-left: auto;
     font-size: .875rem; 
+    display: none; 
 }
 
 .notice-card { 
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 3.75rem 0; 
 }
 
 .notice-card > * { 
-    flex: 1; 
+    -webkit-box-flex: 1; 
+        -ms-flex: 1; 
+            flex: 1; 
 }
 
 .notice-card .img-box { 
@@ -344,11 +417,15 @@ label.dd-option-text { line-height: inherit !important; }
 
 .inquiry-card { 
     background-color: #fff; 
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: center;    -ms-flex-align: center;    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.875rem 3.75rem;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
 
@@ -358,7 +435,8 @@ label.dd-option-text { line-height: inherit !important; }
     width: 10.625rem; 
     padding: 1rem 1.875rem; 
     border-radius: 1.875rem;
-    box-shadow: 0px 3px 6px #15469A80;
+    -webkit-box-shadow: 0px 3px 6px rgba(21,70,154,.5);
+            box-shadow: 0px 3px 6px rgba(21,70,154,.5);
     font-size: 1.125rem; 
 }
 
@@ -373,6 +451,18 @@ label.dd-option-text { line-height: inherit !important; }
     min-width: 3.75rem; 
     margin-right: 1rem; 
     text-align:justify; 
+}
+
+.mobile-btn { 
+    display: none; 
+    text-align: center;
+    margin-top: .625rem; 
+}
+.mobile-btn a { 
+    display: inline-block; 
+    padding: .225rem 1rem; 
+    border-radius: 1rem;
+    border: 1px solid #EBEBEB;
 }
 
 company-detail-list { margin-right: 1.875rem; }
@@ -400,15 +490,26 @@ company-detail-list { margin-right: 1.875rem; }
 }
 
 .certification-list { 
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    display: flex;
+    -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
+        flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .certification-list ul { 
+    display: -webkit-inline-box; 
+    display: -ms-inline-flexbox; 
     display: inline-flex; 
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%; 
     max-width: 1000px; 
     margin: 0 auto; 
@@ -426,24 +527,30 @@ company-detail-list { margin-right: 1.875rem; }
     display: inline-block;
     max-width: 170px; 
     margin-bottom: .75rem; 
-    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 6px 12px rgba(0,0,0,0.2); 
+            box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
 }
 
 .product-info .customer-list { 
     width: 100%; 
     max-width: 1200px;
     margin: 0 auto; 
-    box-shadow: none;
+    -webkit-box-shadow: none; 
+            box-shadow: none;
 }
 
 .customer-list {
-    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+            box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
 
 .customer-list ul { 
-    display: flex; 
-    flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    
+    -ms-flex-wrap: wrap;    
+        flex-wrap: wrap;
 }
 
 .customer-list ul li { 
@@ -454,7 +561,10 @@ company-detail-list { margin-right: 1.875rem; }
     text-align: center;
 }
 
-.contact .map { width: 100%; }
+.contact .map { 
+    width: 100%; 
+    border: 1px solid #EBEBEB; 
+}
 
 .contact-list { margin-left: 3.75rem; }
 
@@ -465,9 +575,14 @@ company-detail-list { margin-right: 1.875rem; }
 
 .contact-list ul li button { margin-top: 1.25rem; }
 
+.table-input-title { display: none; }
+
+.mobile-write-box { display: none; }
+
 .surgery-adv ul { 
-    display: flex; 
-    flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -ms-flex-wrap: wrap;    flex-wrap: wrap;
 }
 
 .surgery-adv ul li { width: 24%; }
@@ -489,8 +604,9 @@ company-detail-list { margin-right: 1.875rem; }
 }
 
 .card-group { 
-    display: flex; 
-    flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -ms-flex-wrap: wrap;    flex-wrap: wrap;
     margin-left: -3%; 
 }
 
@@ -498,11 +614,13 @@ company-detail-list { margin-right: 1.875rem; }
     width: 30.33%; 
     margin-left: 3%; 
     margin-bottom: 3.75rem; 
+    cursor: pointer;
 }
 
 .card-group .card .card-img { 
-    display: flex; 
-    margin-bottom: 1.25rem; 
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    margin-bottom: 1.25rem; 
     border-radius: .25rem;
     overflow: hidden;
 }
@@ -516,7 +634,9 @@ company-detail-list { margin-right: 1.875rem; }
 }
 
 .card-group .card p { 
-    display: flex; 
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: start;    -ms-flex-align: start;    align-items: flex-start;
     margin-bottom: .625rem; 
     line-height: 1.125rem; 
 }
@@ -524,6 +644,14 @@ company-detail-list { margin-right: 1.875rem; }
 .card-group .card p small { 
     font-size: .75rem; 
 }
+
+#addressModal .modal-body { 
+    -webkit-box-flex: 1; 
+        -ms-flex: 1; 
+            flex: 1;    
+}
+
+#addressModal .modal-body .address-map { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 [class*="-filter"] { margin-bottom: 1.25rem; }
 [class*="-filter"] .search { margin-left: .625rem; }
@@ -559,17 +687,22 @@ company-detail-list { margin-right: 1.875rem; }
 
 .study-detail-info .class-name { margin-bottom: 1.875rem; }
 
-.address-filter { 
-    display: flex; 
-    align-items: flex-end;
+.address-filter.board-filter {   
+    -webkit-box-align: end;   
+        -ms-flex-align: end;   
+            align-items: flex-end;  
+    -webkit-box-pack: justify;  
+        -ms-flex-pack: justify;  
+            justify-content: space-between;
 }
 
-.address-filter p { 
+.address-map p { 
     font-size: .875rem; 
 }
 
 .address-list { 
     height: 100%; 
+    min-height: 100px; 
     max-height: 200px; 
     border: 1px solid #E0E0E0; 
     border-radius: .25rem;
@@ -581,25 +714,30 @@ company-detail-list { margin-right: 1.875rem; }
 }
 
 .card-content.row { 
-    display: flex; 
-    align-items: flex-start; 
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: start;    -ms-flex-align: start;    align-items: flex-start; 
 }
 
-.card-content.row > * { flex: 1; }
+.card-content.row > * { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
-.card-content.row .img-box { flex: 1.5; }
+.card-content.row .img-box { -webkit-box-flex: 1.5; -ms-flex: 1.5; flex: 1.5; }
 
-.surgery-intro { 
+
+
+.surgery-intro .content { 
     width: 100%; 
     max-width: 1200px; 
     margin: auto; 
     border-radius: .625rem;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
 }
 
 .surgery-intro .card-content.surgery .surgery-compare { 
-    display: flex; 
-    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: center;    -ms-flex-align: center;    align-items: center;
     margin-bottom: 1.875rem; 
 }
 
@@ -619,7 +757,9 @@ company-detail-list { margin-right: 1.875rem; }
     max-width:1000px; 
     margin: auto; 
     padding: 0 3.75rem; 
-    align-items: flex-end;
+    -webkit-box-align: end; 
+        -ms-flex-align: end; 
+            align-items: flex-end;
     margin-left: 2.5rem; 
 }
 
@@ -637,7 +777,9 @@ company-detail-list { margin-right: 1.875rem; }
 
 .surgery-intro .card-content.award .img-box { 
     position: relative;
-    flex: 1; 
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; 
 }
 
 .surgery-intro .card-content.award .img-box::after { 
@@ -700,20 +842,33 @@ company-detail-list { margin-right: 1.875rem; }
     margin: auto; 
     padding: 5rem 5rem 3.125rem; 
     border-radius: .625rem; 
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 10px 20px rgba(0,0,0,0.2); 
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
 }
 
-.product-info > div + div { margin-top: 3.75rem; }
-.product-info > div.light-blue-bg { 
-    padding: 3.75rem 0; 
-}
+.product-info > div { padding: 1.875rem }
 
 .product-info .card .card-header { 
-    display: flex; 
-    align-items: flex-start;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;    -webkit-box-align: start;    -ms-flex-align: start;    align-items: flex-start;
 }
 
-.product-info .card .card-header > div { flex: 1; }
+.product-info .card .card-header > div { 
+    width: 100%; 
+    -webkit-box-flex: 1; 
+        -ms-flex: 1; 
+            flex: 1; 
+}
+
+.product-info .card .pc-table > div { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.product-info .card .card-header > div img { 
+    display: block; 
+    width: 100%; 
+    max-width: 384px; 
+    margin: 1.25rem auto; 
+}
 
 .product-info .card .card-header h3 { 
     line-height: 2.625rem; 
@@ -762,16 +917,18 @@ company-detail-list { margin-right: 1.875rem; }
 .survey-group ul li { font-size: .875rem; }
 .survey-group ul li + li { margin-top: 1.25rem; }
 .survey-group ul li p { margin-bottom: .625rem; }
-.survey-group ul li form { display: flex; }
+.survey-group ul li form { display: -ms-flexbox; 
+    display: -webkit-flex;}
 .survey-group ul li form .rdo + .rdo { margin-left: 1.25rem; }
-.survey-group ul li form .rdo { flex-shrink: 0; }
+.survey-group ul li form .rdo { -ms-flex-negative: 0; flex-shrink: 0; }
 .survey-group ul li form .rdo label::before { margin-right: .25rem; }
 
 .vnm-login.col, 
 .kor-login.row { display: none; }
 
 .kor-login.row.active, 
-.vnm-login.col.active { display: flex; }
+.vnm-login.col.active { display: -ms-flexbox; 
+    display: -webkit-flex;}
 
 .vnm-login span { font-size: .875rem; }
 
@@ -796,9 +953,10 @@ company-detail-list { margin-right: 1.875rem; }
 
 .page.greeting .page-content { 
     background: url('../img/ceo.png') no-repeat bottom right;
+    background-size: contain; 
 }
 
-.page.greeting .content.text { flex: 1; }
+.page.greeting .content.text { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 .page.greeting .content.text .greeting-img { max-width: 40rem; }
 
 .gnb-menu-btn {
@@ -808,50 +966,45 @@ company-detail-list { margin-right: 1.875rem; }
     padding: 0;
 }
 
+.pc-card { display: block; }
+.mobile-card { display: none; }
+
 @media (max-width: 1200px) { 
+
+    .contact .map { margin-bottom: 2.5rem; }
+
+    .ocu-info-card img { max-width: 250px; }
+
+    .pc-card { display: none !important; }
+    .mobile-card { display: block; }
 
     html, body { font-size: 14px; }
 
-    .page, .page.remove-padding,
-    .page.full-screen { padding: 6.25rem 2.5rem 12rem }
+    .page-content.surgery-intro { padding: 1.875rem; }
 
-    .history-card { 
-        max-width: 650px !important; 
-        flex-direction: column;
-        left: 0 !important; 
+    .page.remove-padding,
+    .page.full-screen { padding: 6.25rem 0 12rem }
+
+    .page.full-screen .page-title { padding: 0 1.875rem; }
+
+    .product-info > div, 
+    .product-info > div.light-blue-bg { padding: 1.875rem; }
+
+    .surgery-intro .card-content.award .img-box::after { 
+        display: none; 
     }
 
-    .history-card .history-title-img { 
-        background: url('../img/history_text_left.png') no-repeat; 
-        width: 100%;
-        max-width: 18rem; 
-        height: 162px; 
-        background-size: contain; 
-        margin-bottom: 2.5rem;
-        margin-left: 6.5rem; 
-    }
-    .history-card .history-title-img img { display: none; }
+    .notice-card { display: block; }
 
-    .history-card ol::before { top: 0; }
-
-    .history-card ol > li:nth-child(2n) ul { 
-        transform: translateX(0); 
-    }
-
-    .history-card ol > li:nth-child(2n) li {
-        justify-content: flex-start;    
-    }
-
-    .notice-card { flex-direction: column; }
-
-    .notice-card .img-box { width: 80%; }
+    .notice-card .img-box { margin: auto; width: 80%; }
 
     .notice-card .board { 
         width: 80%; 
         margin: 1.875rem auto; 
     }
 
-    .surgery-intro .card { padding: 2.5rem 1.875rem }
+    .surgery-intro .card, 
+    .product-info .card { padding: 3.75rem 1.875rem 3.125rem}
 
     .gnb-menu-btn { display: block; }
 
@@ -885,7 +1038,9 @@ company-detail-list { margin-right: 1.875rem; }
     .gnb-menu.active { display: block; }
 
     .menu-box { 
-        justify-content: flex-start;
+        -webkit-box-pack: start; 
+            -ms-flex-pack: start; 
+                justify-content: flex-start;
         display: block; 
         height: auto; 
         margin: 0; 
@@ -910,7 +1065,8 @@ company-detail-list { margin-right: 1.875rem; }
         content: ''; 
         right: 18px; 
         top: calc(1.875rem + 3px); 
-        transform: translateY(-50%); 
+        -webkit-transform: translateY(-50%); 
+                transform: translateY(-50%); 
         border-width: 6px; 
         border-radius: 3px; 
         border-style: solid; 
@@ -941,7 +1097,7 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
     .card-content.surgery .surgery-compare { 
-        flex-direction: column;
+        display: block; 
     }
 
     .surgery-intro .card.award { 
@@ -949,9 +1105,19 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
     .surgery-intro .card-content.award { 
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        display: block; 
+        display: -webkit-flex; 
+        -webkit-box-orient: vertical; 
+        -ms-webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
+        flex-direction: column; 
+        -webkit-box-align: center; 
+            -ms-flex-align: center; 
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        text-align: center;
         padding: 0; 
         margin-left: auto; 
     }
@@ -960,12 +1126,21 @@ company-detail-list { margin-right: 1.875rem; }
 
     .surgery-side-effect .card-content, 
     .surgery-safe .card-content {
+        -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
         flex-direction: column;
+        display: block; 
+        display: -webkit-flex; 
     }
 
     .surgery-effect .card-content, 
     .surgery-light .card-content {
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        display: block; 
+        display: -webkit-flex; 
     }
 
     .surgery-side-effect .card-content .img-box, 
@@ -984,17 +1159,31 @@ company-detail-list { margin-right: 1.875rem; }
 
     .surgery-effect .card-content .img-box, 
     .surgery-light .card-content .img-box {
+        width: 100%; 
         margin-right: 0; 
         margin-top: 1.875rem;
     }
 
     .tab-content .row { 
         max-width: 100%; 
+        -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
         flex-direction: column; 
+        display: block; 
+        display: -webkit-flex; 
     }
 
-    .tab-btn { max-width: 100%; }
-    .tab-btn + .tab-btn { margin-left: 0; }
+    .tab-btn { 
+        max-width: 100%; 
+        -webkit-box-flex: 1; 
+            -ms-flex: 1; 
+                flex: 1; 
+    }
+    .tab-btn + .tab-btn { 
+        margin-left: 0; 
+        border-left: 0; 
+    }
+
     .tab-content .review-text + .review-text { margin-left: auto; }
 
     .tab-btn-group { padding: 0 1.875rem; }
@@ -1005,16 +1194,17 @@ company-detail-list { margin-right: 1.875rem; }
     .tab-content.review::before { display: none; }
 
     .tab-content .surgery-method { padding: 0 1.875rem; }
-    
+
     .customer-list ul li { 
         max-width: 48%; 
         margin-left: 2%;         
     }
 
     .surgery-intro .card-content.surgery .surgery-compare span { margin: 1rem 0; }
-    .page-content.contact .content.row { flex-direction: column; }
+    .page-content.contact .content.row { -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
+        flex-direction: column; }
     .contact-list { margin-left: 0; }
-    .surgery-intro { box-shadow: none; }
 
     .tab-content.review { background-image: none; padding: 0 0 12rem; }
     .tab-content .pc-review-text { display: none; }
@@ -1032,10 +1222,60 @@ company-detail-list { margin-right: 1.875rem; }
     .tab-content .review-text.mobile-review-text .kim-pro .card, 
     .tab-content .review-text.mobile-review-text .lee-pro .card { margin-top: 0; }
 
+    .ocu-info-card { 
+        display: block; 
+        display: -webkit-flex; 
+        display: -ms-flexbox; 
+        flex-direction: column;
+        align-items: flex-start; 
+    }
 
+    .ocu-info-card p { display: block; }
+
+    .ocu-info-card div { margin-bottom: 1.25rem; }
+
+    footer { 
+        -webkit-box-orient: vertical; 
+        -webkit-box-direction: reverse; 
+            -ms-flex-direction: column-reverse; 
+                flex-direction: column-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 3.5rem 1.875rem 2.5rem; 
+    }
 }
 
 @media (max-width: 700px) { 
+
+    .card-group .card:last-child { margin-bottom: 0; }
+
+    .history-card .date-circle { 
+        margin: 0; 
+    }
+
+    section [class*="-card"]:not(.online-card) { 
+        padding: 1.875rem !important; 
+    }
+
+    section [class*="-card"].history-card { padding: 0 !important }
+    section [class*="-card"].history-card ul, 
+    section [class*="-card"].history-card .img-box { 
+        padding-left: 1.25rem; 
+    }
+
+    .pc-btn.more-view-btn { display: none; }
+    .mobile-btn { display: block; }
+
+    form .item input[type="text"],
+    form .item input[type="password"] { 
+        width: 100%; 
+        flex: 1 0 auto; 
+    }
+
+    .web-write-box { display: none; }
+    .mobile-write-box { 
+        display: block; }
 
     .mobile-td { position: relative; }
     .mobile-td .right { 
@@ -1048,15 +1288,13 @@ company-detail-list { margin-right: 1.875rem; }
 
     .gnb-menu { width: 100%; }
 
-    .ocu-info-card { 
-        flex-direction: column; 
-        align-items: flex-start;
+    .ocu-info-card,
+    .ocu-info-card p { 
+        display: block; 
     }
-
-    .ocu-info-card div { margin-bottom: 1.25rem; }
     .ocu-info-card p br { display: none !important; }
 
-    .ocu-product-card { flex-direction: column; }
+    .ocu-product-card {display: block; }
 
 
     .ocu-product-card .card-item img { max-width: 80%; }
@@ -1064,11 +1302,15 @@ company-detail-list { margin-right: 1.875rem; }
     .ocu-product-card .card-item + .card-item { margin-top: 1.875rem; }
     .news-card { padding: 1.875rem; }
     .board-list a { margin-right: 1.875rem; }
-    .board-list .register-date { flex-shrink: 0; }
+    .board-list .register-date { -ms-flex-negative: 0; flex-shrink: 0; }
 
     .inquiry-card { 
+        -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
         flex-direction: column; 
-        align-items: flex-start;
+        -webkit-box-align: start; 
+            -ms-flex-align: start; 
+                align-items: flex-start;
     }
 
     .inquiry-card div { width: 100% }
@@ -1080,17 +1322,7 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
     section .history-title { text-align: left; }
-    .history-card .history-title { 
-        width: 20rem; 
-        margin-left: 6.5rem; 
-    }
-    .history-card ol > li .date-circle { margin-left: 0; }
-    .history-card ol::before { 
-        top: -12rem; 
-        left: 1.875rem; 
-        height: calc(100% + 12rem); 
-    }
-
+    .history-card .history-title { width: 20rem; }
     .crumble { display: none; }
 
     .table td a { margin-bottom: .25rem;}
@@ -1120,26 +1352,31 @@ company-detail-list { margin-right: 1.875rem; }
 
     .table td { line-height: 1.875rem; }
 
-    .table .sub-box { display: flex; }
+    .table .sub-box { display: -ms-flexbox; 
+    display: -webkit-flex;}
 
     .table:not(.board-content) th:nth-child(2), 
     .table td:nth-child(2) { padding-left: 0; }
 
-    footer { 
-        flex-direction: column-reverse;
-        align-items: center;
-    }
+  
 
     footer .company-detail-list { 
-        display: flex; 
+        display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;        -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
         flex-direction: column;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-top: 1.875rem; 
     }
 
     footer .company-detail-list li { text-align: center; }
 
-    
+    .modal { 
+        padding: 4.375rem 1.75rem 2.5rem; 
+    } 
 
     .card-group { margin-left: 0; }
     .card-group .card { 
@@ -1153,18 +1390,25 @@ company-detail-list { margin-right: 1.875rem; }
         text-align: left; 
     }
 
+
     .content.product-info .card-header { 
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical; 
+        -webkit-box-direction: reverse; 
+            -ms-flex-direction: column-reverse; 
+                flex-direction: column-reverse;
+        display: block; 
     }
 
-    .product-info .card .card-content { flex-direction: column; }
+    .product-info .card .card-content { -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
+        flex-direction: column; }
     .product-info .card .card-content > div { width: 100%; }
     .product-info .card .card-content .table-two { 
         margin-top: 2.5rem; 
         margin-left: 0; 
     }
 
-    .pc-table { display: none; }
+    .pc-table { display: none !important; }
     .mobile-table { 
         width: 100%; 
         display: table; 
@@ -1177,39 +1421,69 @@ company-detail-list { margin-right: 1.875rem; }
         margin-bottom: 2%; 
     }
 
-    .survey-group ul li form { flex-direction: column; }
+    .survey-group ul li form { -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
+        flex-direction: column; }
     .survey-group ul li form .rdo + .rdo { 
         margin-left: 0; 
         margin-top: .625rem; 
     }
 
     .modal { 
-        height: 100vh; 
+        height: 100%; 
+        max-width: 100%; 
         border-radius: 0;
-        display: flex; 
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;        
+        -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .modal .modal-body { 
-        flex: 1; 
+        width: 100%; 
+        height: 100%; 
+        -webkit-box-flex: 1; 
+            -ms-flex: 1; 
+                flex: 1; 
         overflow: auto; 
     }
 
-    form .item:not([class*="-login"]), 
+    .modal .modal-body .study-detail-info, 
+    .modal .modal-body .terms { max-height: 100%; }
+
+    form .item:not([class*="-login"]),
     form .item [class*="-input"] { 
+        -webkit-box-orient: vertical; 
+        -ms-flex-direction: column; 
         flex-direction: column;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+
+    form .item.agree-chk { 
+        -webkit-box-orient: horizontal; 
+        -webkit-box-direction: normal; 
+        -ms-flex-direction: row; 
+        flex-direction: row; ;
     }
 
     form .item > label, 
     form .item [class*="-input"] > label { 
+        display: inline-block; 
         margin-bottom: .625rem; 
     }
 
     form [class*="-input"].include-btn .btn { 
-        bottom: .5rem; 
+        bottom: .35rem; 
     }
 
     form .no-label-item { padding-left: 0; }
@@ -1220,10 +1494,6 @@ company-detail-list { margin-right: 1.875rem; }
         margin-bottom: 2.5rem; 
     }
 
-    .tab-content .review-text.mobile-review-text .kim-pro, 
-    .tab-content .review-text.mobile-review-text .lee-pro { 
-        background-image: none;
-        background-color: #F4F7FB; 
-    }
+    .product-info .card .card-header h3 { text-align: center;}
 
 }

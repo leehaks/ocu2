@@ -92,13 +92,12 @@
                 <h2 class="primary-text">로그인</h2>
             </div>
             <div class="page-content">
+
                 <div class="content">
                     <form>
-                        <div class="item">
-                            <div class="text-input include-btn">
-                                <label>E-mail(ID)</label>
-                                <input type="text" />
-                            </div>
+                        <div class="text-input item">
+                            <label>E-mail(ID)</label>
+                            <input type="text" />
                         </div>
 
                         <div class="password-input item">
@@ -120,7 +119,7 @@
                         </div>
 
                         <div class="item mt-30 row center kor-login active">
-                            <a href="/pageHtml/logup.html" class="btn-link">회원가입</a>
+                            <a href="./logup.html" class="btn-link">회원가입</a>
                             <a onclick="modalOpen(idSearchModal, event)" class="btn-link ml-60">아이디 찾기</a>
                             <a onclick="modalOpen(pwSearchModal, event)" class="btn-link ml-60">비밀번호 찾기</a>
                         </div>
@@ -139,7 +138,6 @@
                             </span>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
@@ -333,6 +331,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
-    <script src="../js/component.js"></script>     
+    <script src="../js/forEachpolyfill.js"></script>
+    <script src="../js/component.js"></script>         
 </body>
 </html>

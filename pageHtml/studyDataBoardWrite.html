@@ -89,85 +89,96 @@
     <div id="wrap">
         <div class="page">
             <div class="page-title">
-                <h2 class="primary-text">공지사항</h2>
+                <h2 class="primary-text">학습자료실</h2>
 
                 <div class="crumble">
                     <ul>
                         <li><a href="" target="_self">고객센터</a></li>
-                        <li><a href="" target="_self">공지사항</a></li>
+                        <li><a href="" target="_self">학습자료실</a></li>
                     </ul>
                 </div>
             </div>
             <div class="page-content">                
                 <div class="content">
-                    <div class="board-filter row right">
-                        <select id="noticeBoard" class="basic">
-                            <option>제목</option>
-                            <option>선택</option>
-                            <option>선택</option>
-                        </select>
-                        <div class="search">
-                            <input type="text" placeholder="과정 명을 검색해보세요" />
-                            <button class="search-btn"></button>
-                        </div>
-                    </div>
                     <div class="board-card table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th width="100">No</th>
-                                    <th>제목</th>
-                                    <th width="150">작성자</th>
-                                    <th width="150">작성일</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td>
-                                        <a href="./noticeBoardContent.html" target="_self">수강생 교육 수강 절차 안내</a>
-                                        <div class="sub-box row middle"><span class="view-sub">한국지사</span><span class="date-sub">2019-12-27</span></div>
-                                    </td>
-                                    <td class="text-center">한국지사</td>
-                                    <td class="text-center">2019-12-27</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">2</td>
-                                    <td>
-                                        <a href="./noticeBoardContent.html" target="_self">수강생 교육 수강 절차 안내</a>
-                                        <div class="sub-box row middle"><span class="view-sub">베트남지사</span><span class="date-sub">2019-12-27</span></div>
-                                    </td>
-                                    <td class="text-center">한국지사</td>
-                                    <td class="text-center">2019-12-27</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">1</td>
-                                    <td>
-                                        <a href="./noticeBoardContent.html" target="_self">수강생 교육 수강 절차 안내</a>
-                                        <div class="sub-box row middle"><span class="view-sub">한국지사</span><span class="date-sub">2019-12-27</span></div>
-                                    </td>
-                                    <td class="text-center">한국지사</td>
-                                    <td class="text-center">2019-12-27</td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-
-                        <!-- <div class="mt-20 text-right">
-                            <button class="btn border  primary-border">글쓰기</button>
-                        </div> -->
-
-                        <div class="page-navigation">
-                            <ul>
-                                <li><button class="nav-item-arrow-btn left"></button></li>
-                                <li><button class="nav-item-num active">1</button></li>
-                                <li><button class="nav-item-num">2</button></li>
-                                <li><button class="nav-item-num">3</button></li>
-                                <li><button class="nav-item-ellipsis">..</button></li>
-                                <li><button class="nav-item-num">10</button></li>
-                                <li><button class="nav-item-arrow-btn right"></button></li>
-                            </ul>
+                        <div class="web-write-box">
+                            <table>                            
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">이름</td>
+                                        <td class="text-center making-name">홍길동</td>
+                                    </tr>
+                                    <tr class="insert-td">
+                                        <td class="text-center">제목</td>
+                                        <td class="text-center">
+                                            <p class="table-input-title">제목</p><input type="text" /></td>
+                                    </tr>
+                                    <tr class="insert-td">
+                                        <td class="text-center">내용</td>
+                                        <td class="textarea-td text-center">
+                                            <p class="table-input-title">내용</p>
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="rdo-group row middle">
+                                                    <div class="rdo">
+                                                        <input id="publicRdo" type="radio" name="disclosureStatus" checked />
+                                                        <label for="publicRdo">공개</label>
+                                                    </div>
+                                                    <div class="rdo">
+                                                        <input id="privateRdo" type="radio" name="disclosureStatus" />
+                                                        <label for="privateRdo" >비공개</label>
+                                                    </div>
+                                                </div>
+                                                <div class="password ml-30">
+                                                    <input type="password" placeholder="비밀번호"/>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="mt-20 text-right">
+                                <a href="./freeBoard.html" class="btn border primary-border">등록</a>
+                            </div>
                         </div>
+                        
+                        <form class="mobile-write-box">
+                            <div class="text-input item mt-30">
+                                <label>이름</label>
+                                <input type="text" value="홍길동" readonly />
+                            </div>
+                            <div class="text-input item mt-30">
+                                <label>제목</label>
+                                <input type="text" />
+                            </div>
+                            <div class="text-input item mt-30">
+                                <label>내용</label>
+                                <textarea></textarea>
+                            </div>
+                            <div class="row mt-20">
+                                <div class="rdo-group row middle">
+                                    <div class="rdo">
+                                        <input id="publicRdo1" type="radio" name="disclosureStatus1" checked />
+                                        <label for="publicRdo1">공개</label>
+                                    </div>
+                                    <div class="rdo">
+                                        <input id="privateRdo1" type="radio" name="disclosureStatus1" />
+                                        <label for="privateRdo1" >비공개</label>
+                                    </div>
+                                </div>
+                                <div class="password ml-30">
+                                    <input type="password" placeholder="비밀번호"/>
+                                </div>
+                            </div>
+                            <div class="mt-20 text-right">
+                                <a href="./freeBoard.html" class="btn border primary-border">등록</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -161,7 +161,7 @@
 
                         <p class="form-explain no-label-item">[예]에 체크하시면 업데이트되는 온/오프라인 교육 소식을 받아보실 수 있습니다.</p>
 
-                        <div class="item row mt-30"> 
+                        <div class="item row mt-30 agree-chk"> 
                             <div class="chk">
                                 <input id="useAgreeChk" type="checkbox" />
                                 <label for="useAgreeChk">이용약관에 동의합니다.</label>
@@ -169,7 +169,7 @@
                             <button onclick="modalOpen(termModal, event)" class="btn-link ml-auto">보기</button>
                         </div>
 
-                        <div class="item row mt-20"> 
+                        <div class="item row mt-20 agree-chk"> 
                             <div class="chk">
                                 <input id="privacyAgreeChk" type="checkbox" />
                                 <label for="privacyAgreeChk">개인정보 취급방침에 동의합니다.</label>
@@ -213,26 +213,27 @@
             </div>
             <div class="modal-body">
 
-                <div class="board-filter row">
+                <div class="search block">
+                    <input type="text" value="마음속내과" />
+                    <button class="search-btn"></button>
+                </div>
+
+                <div class="address-filter board-filter row mt-20">
+                    <p><span class="primary-text">'마음속내과'</span> 검색 결과입니다.</p>
                     <select id="mapBoard" class="basic">
-                        <option>제목</option>
-                        <option>선택</option>
-                        <option>선택</option>
+                        <option>전체지역(876)</option>
+                        <option>전라북도(217)</option>
+                        <option>강원도(127)</option>
                     </select>
-                    <div class="search block">
-                        <input type="text" placeholder="마음속내과" />
-                    </div>
                 </div>
 
-                <div class="address-filter mt-20">
-                    <p><span class="text-primary">'마음속내과'</span> 검색 결과입니다.</p>
-                    <div></div>
+                <div class="address-map">
+                    <!-- 주소리스트 -->
+                    <div class="address-list"></div>
                 </div>
 
-                <!-- 주소리스트 -->
-                <div class="address-list"></div>
                 
-                <form class="mt-30">
+                <form class="mt-20">
                     <div class="over-label">찾으시는 병의원이 없을 경우, 직접 입력해주세요.</div>
                     <div class="item mt-10">
                         <div class="text-input include-btn">
@@ -264,6 +265,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
-    <script src="../js/component.js"></script>     
+    <script src="../js/forEachpolyfill.js"></script>
+    <script src="../js/component.js"></script>         
 </body>
 </html>

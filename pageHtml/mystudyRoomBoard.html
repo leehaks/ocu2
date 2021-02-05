@@ -87,7 +87,7 @@
     </header>
     
     <div id="wrap">
-        <div class="page remove-padding">
+        <div class="page">
             <div class="page-title">
                 <h2 class="primary-text">나의 강의실</h2>
             </div>
@@ -101,6 +101,7 @@
                         </select>
                         <div class="search">
                             <input type="text" placeholder="과정 명을 검색해보세요" />
+                            <button class="search-btn"></button>
                         </div>
                     </div>
                     <div class="board-card table">
@@ -121,7 +122,7 @@
                                     <td>
                                         <a href="" target="_self">새로운 백내장 수술 기구 아이챠퍼&아이비전</a>
                                         <div class="sub-box row middle"><span class="view-sub primary-text">학습중</span><span class="date-sub">수강일 2019-12-27</span></div>
-                                        <div class="sub-box row"><button class="btn border sm" onclick="modalOpen(satisfactionModal, event)">만족도 조사</button><button class="btn border sm ml-auto">국문 수료증</button><button class="btn border sm">영문 수료증</button></div>
+                                        <div class="sub-box row"><button class="btn border sm primary-border" onclick="modalOpen(satisfactionModal, event)">만족도 조사</button><button class="btn border sm ml-auto primary-border">국문 수료증</button><button class="btn border sm primary-border">영문 수료증</button></div>
                                     </td>
                                     <td class="text-center">2019-12-27</td>
                                     <td class="text-center">학습중</td>
@@ -133,14 +134,14 @@
                                     <td>
                                         <a href="" target="_self">새로운 백내장 수술 기구 아이챠퍼&아이비전</a>
                                         <div class="sub-box row middle"><span class="view-sub">학습완료</span><span class="date-sub">수강일 2019-12-27</span></div>
-                                        <div class="sub-box row"><button class="btn border sm disabled" onclick="modalOpen(satisfactionModal, event)">만족도 조사</button><button class="btn border sm disabled ml-auto">국문 수료증</button><button class="btn border sm">영문 수료증</button></div>
+                                        <div class="sub-box row"><button class="btn border sm disabled" onclick="modalOpen(satisfactionModal, event)">만족도 조사</button><button class="btn border sm disabled ml-auto primary-border">국문 수료증</button><button class="btn border sm primary-border">영문 수료증</button></div>
                                     </td>
                                     <td class="text-center">2019-12-27</td>
                                     <td class="text-center">완료</td>
                                     <td class="text-center">완료</td>
                                     <td class="text-center">
-                                        <button class="btn border sm">국문</button>
-                                        <button class="btn border sm">영문</button>
+                                        <button class="btn border sm primary-border">국문</button>
+                                        <button class="btn border sm primary-border">영문</button>
                                     </td>
                                 </tr>
                                 <tr class="active">
@@ -148,16 +149,16 @@
                                     <td>
                                         <a href="" target="_self">새로운 백내장 수술 기구 아이챠퍼&아이비전</a>
                                         <div class="sub-box row middle"><span class="view-sub">학습완료</span><span class="date-sub">수강일 2019-12-27</span></div>
-                                        <div class="sub-box row"><button class="btn border sm text-primary" onclick="modalOpen(satisfactionModal, event)">만족도 조사</button><button class="btn border sm ml-auto">국문 수료증</button><button class="btn border sm">영문 수료증</button></div>
+                                        <div class="sub-box row"><button class="btn border sm text-primary" onclick="modalOpen(satisfactionModal, event)">만족도 조사</button><button class="btn border sm ml-auto primary-border">국문 수료증</button><button class="btn border sm primary-border">영문 수료증</button></div>
                                     </td>
                                     <td class="text-center">2019-12-27</td>
                                     <td class="text-center">완료</td>
                                     <td class="text-center">
-                                        <button onclick="modalOpen(satisfactionModal, event)" class="btn border sm">참여</button>
+                                        <button onclick="modalOpen(satisfactionModal, event)" class="btn border sm primary-border">참여</button>
                                     </td>
                                     <td class="text-center">
-                                        <button class="btn border sm">국문</button>
-                                        <button class="btn border sm">영문</button>
+                                        <button class="btn border sm primary-border">국문</button>
+                                        <button class="btn border sm primary-border">영문</button>
                                     </td>
                                 </tr>
                                
@@ -328,6 +329,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
-    <script src="../js/component.js"></script>     
+    <script src="../js/forEachpolyfill.js"></script>
+    <script src="../js/component.js"></script>         
 </body>
 </html>
