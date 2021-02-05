@@ -85,7 +85,7 @@ function modalOpen(elem, event) {
     event.preventDefault();
     console.log(elem)
     elem.classList.add('active');
-    document.querySelector('body').classList.add('scroll-hidden');
+    document.querySelector('body').classList.add('scroll-hidden');    
 }
 
 function modalClose(elem) {
@@ -194,15 +194,6 @@ function menuActive() {
 
 menuActive();
 
-let vh = window.innerHeight * 0.01
-
-document.documentElement.style.setProperty('--vh', `${vh}px`)
-
-window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty('--vh', `${vh}px`)
-})
-
 $("#language").ddslick({
     width: "105px",
     imagePosition: "left",
@@ -220,3 +211,5 @@ $("#noticeBoard").ddslick({
 $("#mapBoard").ddslick({
     width: "145px"
 });
+
+
