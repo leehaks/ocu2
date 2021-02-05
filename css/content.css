@@ -1521,8 +1521,6 @@ company-detail-list { margin-right: 1.875rem; }
 
     form .no-label-item { padding-left: 0; }
 
-    #wetlabApplyModal .modal-body { padding-right: 1rem; }
-
     .customer-list ul li { 
         max-width: 100%; 
         margin-left: 0;         
@@ -1531,20 +1529,6 @@ company-detail-list { margin-right: 1.875rem; }
 
     .product-info .card .card-header h3 { text-align: center;}
 
-    ::-webkit-scrollbar { 
-        width: 5px;
-        z-index: 100; 
-    }
-
-        /* Track */
-    ::-webkit-scrollbar-track {
-        border-radius: 10px;
-    }
     
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: #EBEBEB;
-        border-radius: 10px;
-    }
 }
 
