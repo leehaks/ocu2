@@ -959,11 +959,11 @@ company-detail-list { margin-right: 1.875rem; }
 
 .page.greeting .page-content { 
     background: url('../img/ceo.png') no-repeat bottom right;
-    /* background-size: contain;  */
+    background-size: 300px; 
 }
 
 .page.greeting .content.text { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
-.page.greeting .content.text .greeting-img { max-width: 40rem; }
+.page.greeting .content.text .greeting-img { max-width: 35rem; }
 
 .gnb-menu-btn {
     display: none; 
@@ -1253,6 +1253,11 @@ company-detail-list { margin-right: 1.875rem; }
         overflow: auto; 
         white-space: normal;
     }
+
+    .page.greeting .page-content { 
+        background-size: 275px; 
+        background-position: 110% right;
+    }
 }
 
 @media (max-width: 700px) { 
@@ -1368,14 +1373,14 @@ company-detail-list { margin-right: 1.875rem; }
     .page.greeting { 
         background: url('../img/ceo.png') no-repeat;
         /* background-size: 75%;  */
-        background-position: 125% 90%;
+        background-position: 110% 90%;
     }
 
     .page.greeting .page-content { background-image: none;  }
 
     .page.greeting .page-content .greeting-ceo p.mobile br { display: none; }
     .page.greeting .page-content .greeting-ceo p.mobile { 
-        padding-right: 7rem; 
+        padding-right: 10rem; 
     }
 
     .board-card table th, 
