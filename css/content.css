@@ -1459,6 +1459,7 @@ company-detail-list { margin-right: 1.875rem; }
     .modal { 
         padding: 4.375rem 1.75rem 2.5rem; 
         height: 100vh; 
+        height: calc(var(--vh, 1vh) * 100); 
         max-width: 100%; 
         border-radius: 0;
         display: -ms-flexbox;
