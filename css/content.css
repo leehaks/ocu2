@@ -1529,8 +1529,16 @@ company-detail-list { margin-right: 1.875rem; }
     }
 
     .fake-scroll { 
-        position: relative; 
-        z-index: 0; }
+        overflow: hidden;
+    }
+
+    .fake-scroll form{ 
+        width: calc( 100% + 20px ); 
+        max-width: initial; 
+        padding-right: 20px; 
+    }
+
+    #wetlabApplyModal .modal-body { height: 55%; }
 
     .product-info .card .card-header h3 { text-align: center;}
 
