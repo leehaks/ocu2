@@ -8,8 +8,6 @@ header {
     background-color: #fff; 
 }
 
-body { min-width: 100%; }
-
 body.scroll-hidden { overflow: hidden; }
 
 #wrap { 
@@ -46,7 +44,6 @@ section .section-title {
 section { overflow: hidden; }
 
 section [class*="-card"] { 
-    width: 100%; 
     max-width: 1200px; 
     margin: 0 auto; 
 }
@@ -678,7 +675,6 @@ company-detail-list { margin-right: 1.875rem; }
 .study-detail-info { 
     height: 100%; 
     line-height: 1.625rem; 
-    max-height: 400px; 
     padding: .875rem 1.25rem; 
     border: 1px solid #E0E0E0; 
     border-radius: .25rem;
@@ -1301,8 +1297,7 @@ company-detail-list { margin-right: 1.875rem; }
     .page { padding: 2.5rem; }
 
     .gnb-menu { 
-        width: 100%;     
-        min-width: 100%;     
+        width: 100%;         
     }
 
     .gnb-menu .gnb-close-btn { 
@@ -1349,6 +1344,19 @@ company-detail-list { margin-right: 1.875rem; }
     .table td a { margin-bottom: .25rem;}
 
     .certification-list ul li { max-width: 50%; }
+
+    .page.greeting { 
+        background: url('../img/ceo.png') no-repeat;
+        background-size: 75%; 
+        background-position: 160% 90%;
+    }
+
+    .page.greeting .page-content { background-image: none;  }
+
+    .page.greeting .page-content .greeting-ceo p.mobile br { display: none; }
+    .page.greeting .page-content .greeting-ceo p.mobile { 
+        padding-right: 7rem; 
+    }
 
     .board-card table th, 
     .board-card table td { 

@@ -37,7 +37,7 @@ html, body {
 	font-size: 16px; 
 	-webkit-font-smoothing: antialiased;
 	color: #2E2E2E; 
-	min-width: 400px; 
+	min-width: 200px; 
 }
 
 html, body, div#wrap { 

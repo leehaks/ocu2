@@ -139,7 +139,7 @@
 .gnb-top-menu {
     width: 100%; 
     max-width: 1200px;
-    min-width: 300px; 
+    min-width: 250px; 
     margin: auto; 
     -webkit-box-pack: end; 
         -ms-flex-pack: end; 
