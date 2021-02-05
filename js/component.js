@@ -84,12 +84,12 @@ slider();
 function modalOpen(elem, event) {
     event.preventDefault();
     elem.classList.add('active');
-    document.querySelector('body').classList.add('scroll-hidden');
+    // document.querySelector('body').classList.add('scroll-hidden');
 }
 
 function modalClose(elem) {
     elem.classList.remove('active');
-    document.querySelector('body').classList.remove('scroll-hidden');
+    // document.querySelector('body').classList.remove('scroll-hidden');
 }
 
 function tabController() {
