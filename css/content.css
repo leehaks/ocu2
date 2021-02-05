@@ -959,7 +959,7 @@ company-detail-list { margin-right: 1.875rem; }
 
 .page.greeting .page-content { 
     background: url('../img/ceo.png') no-repeat bottom right;
-    background-size: contain; 
+    /* background-size: contain;  */
 }
 
 .page.greeting .content.text { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
@@ -1367,8 +1367,8 @@ company-detail-list { margin-right: 1.875rem; }
 
     .page.greeting { 
         background: url('../img/ceo.png') no-repeat;
-        background-size: 75%; 
-        background-position: 160% 90%;
+        /* background-size: 75%;  */
+        background-position: 125% 90%;
     }
 
     .page.greeting .page-content { background-image: none;  }
