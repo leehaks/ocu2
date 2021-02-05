@@ -702,13 +702,24 @@ form .item [class*="-input"] button {
 }
 
 form .item input[type="text"],
-form .item input[type="password"] { 
+form .item input[type="password"],
+form .item .fake-input { 
     height: 3rem; 
+    min-height: 3rem; 
     padding: 0 1.25rem;  
     border: 1px solid #E0E0E0; 
     border-radius: .25rem;
     font-size: .875rem; 
     flex: 1; 
+}
+
+form .item .fake-input { line-height: 3rem; }
+
+form .item .fake-input p { 
+    max-width: 95%; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 form .form-explain { 
