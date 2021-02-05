@@ -742,7 +742,7 @@ form [class*="-input"].include-btn input { padding-right: 6rem; }
 form [class*="-input"].include-btn .btn.primary-bg { 
     background-color: #fff; 
     height: 2.25rem; 
-    line-height: 2.25rem; 
+    /* line-height: 2.25rem;  */
     border: 1px solid #325FAB; 
     color: #325FAB; 
 }
