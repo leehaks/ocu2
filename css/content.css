@@ -1388,6 +1388,7 @@ company-detail-list { margin-right: 1.875rem; }
 
     .board-card table th, 
     .board-card table td { 
+        width: 100%; 
         height: auto; 
         line-height: 1.25rem; 
         padding: .875rem 1.25rem !important; 
