@@ -960,6 +960,8 @@ company-detail-list { margin-right: 1.875rem; }
 .page.greeting .page-content { 
     background: url('../img/ceo.png') no-repeat bottom right;
     background-size: 300px; 
+    max-width: 1000px; 
+
 }
 
 .page.greeting .content.text { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
@@ -1247,11 +1249,11 @@ company-detail-list { margin-right: 1.875rem; }
 
     .table td a { 
         display: block; 
-        width: 100%; 
+        max-width: 90%;  
         line-height: 1.5rem;
-        /* text-overflow: ellipsis; */
-        overflow: auto; 
-        white-space: normal;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
     }
 
     .page.greeting .page-content { 
@@ -1373,7 +1375,7 @@ company-detail-list { margin-right: 1.875rem; }
     .page.greeting { 
         background: url('../img/ceo.png') no-repeat;
         /* background-size: 75%;  */
-        background-position: 110% 90%;
+        background-position: 133% 70%;
     }
 
     .page.greeting .page-content { background-image: none;  }
