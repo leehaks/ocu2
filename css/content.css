@@ -1247,11 +1247,11 @@ company-detail-list { margin-right: 1.875rem; }
 
     .table td a { 
         display: block; 
-        width: 100%; 
+        max-width: 90%; 
         line-height: 1.5rem;
-        /* text-overflow: ellipsis; */
-        overflow: auto; 
-        white-space: normal;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
     }
 
     .page.greeting .page-content { 
@@ -1366,7 +1366,7 @@ company-detail-list { margin-right: 1.875rem; }
     .history-card .history-title { width: 20rem; }
     .crumble { display: none; }
 
-    .table td a { margin-bottom: .25rem;}
+    .table td a { margin-bottom: .25rem; }
 
     .certification-list ul li { max-width: 50%; }
 
