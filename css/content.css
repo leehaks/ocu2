@@ -1322,7 +1322,10 @@ company-detail-list { margin-right: 1.875rem; }
         top: .25rem; 
     }
 
-    .page { padding: 2.5rem; }
+    .page { 
+        padding: 2.5rem; 
+        padding-bottom: 5rem; 
+    }
 
     .gnb-menu { 
         width: 100%;         
