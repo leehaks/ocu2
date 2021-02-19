@@ -665,9 +665,10 @@ input::-ms-input-placeholder {
 
 form { 
     width: 100%; 
-    max-width: 450px; 
     margin: auto; 
 }
+
+form.w450 { max-width: 450px !important; }
 
 form .item + .item { margin-top: .625rem; }
 
