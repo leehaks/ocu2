@@ -625,11 +625,12 @@ company-detail-list { margin-right: 1.875rem; }
 }
 
 .card-group .card .card-img { 
-    display: -ms-flexbox;
+    /* display: -ms-flexbox;
     display: -webkit-box;
-    display: flex;    margin-bottom: 1.25rem; 
+    display: flex;     */
+    margin-bottom: 1.25rem; 
     border-radius: .25rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .card-group .card h4 { 
