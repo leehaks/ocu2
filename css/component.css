@@ -652,6 +652,7 @@ tr.insert-td .textarea-td { line-height: 0; }
     display: inline-block; 
     width: 14px; 
     height: 14px; 
+    margin-right: .625rem; 
     background: url(../img/input.png) no-repeat; 
     background-size: contain;
     opacity: 1;
@@ -664,6 +665,9 @@ tr.insert-td .textarea-td { line-height: 0; }
     position: absolute;
     display: none; 
     left: 0; 
+    top: 0; 
+    bottom: 0; 
+    margin: auto; 
     width: 14px;  
     height: 14px; 
 }
@@ -845,6 +849,8 @@ input[type="password"] { padding-left: 1rem; }
 }
 
 .modal-body form { max-width: 100%; }
+
+
 
 .review-content { 
     width: 100%; 
