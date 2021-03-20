@@ -1525,6 +1525,7 @@ company-detail-list { margin-right: 1.875rem; }
     } */
 
     .modal.survey { 
+        top:0; 
         position:fixed; 
         overflow:hidden; 
     }
